@@ -1,0 +1,84 @@
+{
+    "name": "AS CSG test1",
+    "dueDate": "2024-12-31T00:00:00.000Z",
+    "analysis": {
+        "es-ES": {
+            "good": 2182,
+            "locked": 17,
+            "source": 4910,
+            "perfect": 21,
+            "mediocre": 2690,
+            "breakdown": {
+                "mt": {
+                    "good": 2169,
+                    "locked": 0,
+                    "perfect": 1,
+                    "mediocre": 2690
+                },
+                "tm": {
+                    "good": 13,
+                    "locked": 17,
+                    "perfect": 20,
+                    "mediocre": 0
+                }
+            },
+            "cms_locked": 0,
+            "original_source": 4910
+        },
+        "it-IT": {
+            "good": 2182,
+            "locked": 17,
+            "source": 4910,
+            "perfect": 21,
+            "mediocre": 2690,
+            "breakdown": {
+                "mt": {
+                    "good": 2169,
+                    "locked": 0,
+                    "perfect": 1,
+                    "mediocre": 2690
+                },
+                "tm": {
+                    "good": 13,
+                    "locked": 17,
+                    "perfect": 20,
+                    "mediocre": 0
+                }
+            },
+            "cms_locked": 0,
+            "original_source": 4910
+        }
+    },
+    "services": [
+        {
+            "id": 3
+        }
+    ],
+    "languages": [
+        {
+            "source": "en-GB",
+            "target": "es-ES"
+        },
+        {
+            "source": "en-GB",
+            "target": "it-IT"
+        }
+    ],
+    "extraProjectInfo": {
+        "group": "",
+        "owner": {
+            "name": "Helena Cuenca ",
+            "site": "Sant Cugat",
+            "email": "helena.cuenca_gonzalez@roche.com"
+        },
+        "domain": null,
+        "format": "XLIFF",
+        "anything": "anything can be added",
+        "products": [
+            "navify Algorithm Suite"
+        ],
+        "received": "2023-09-19T06:58:41Z",
+        "costCenter": ""
+    },
+    "projectReferenceId": "AS CSG test1"
+}

@@ -1,0 +1,58 @@
+{
+  "projectReferenceId": "DivA_Project_ABC123",
+  "name": "Division A - Project ABC123",
+  "dueDate": "2021-12-31",
+  "languages": [
+    {
+      "source": "en-US",
+      "target": "fr-FR"
+    },
+    {
+      "source": "en-US",
+      "target": "es-ES"
+    },
+    {
+      "source": "en-US",
+      "target": "it-IT"
+    }
+  ],
+  "services": [
+    {
+      "id": 6
+    }
+  ],
+  "extraProjectInfo": {
+    "instructions": "This is a set of Instructions",
+    "priority": "standard",
+    "preapprovedProject": true
+  },
+  "analyis": {
+    "fr-FR": {
+      "iceMatches": 0,
+      "repetitions": 5,
+      "oneHundred": 10,
+      "ninetyFive": 15,
+      "eightyFive": 20,
+      "seventyFive": 25,
+      "newWords": 30
+    },
+    "es-ES": {
+      "iceMatches": 0,
+      "repetitions": 5,
+      "oneHundred": 10,
+      "ninetyFive": 15,
+      "eightyFive": 20,
+      "seventyFive": 25,
+      "newWords": 30
+    },
+    "it-IT": {
+      "iceMatches": 0,
+      "repetitions": 5,
+      "oneHundred": 10,
+      "ninetyFive": 15,
+      "eightyFive": 20,
+      "seventyFive": 25,
+      "newWords": 30
+    }
+  }
+}

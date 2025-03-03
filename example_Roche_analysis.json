@@ -1,0 +1,49 @@
+"analysis": {
+    "es-ES": {
+      "good": 2182,
+      "locked": 17,
+      "source": 4910,
+      "perfect": 21,
+      "mediocre": 2690,
+      "breakdown": {
+        "mt": {
+          "good": 2169,
+          "locked": 0,
+          "perfect": 1,
+          "mediocre": 2690
+        },
+        "tm": {
+          "good": 13,
+          "locked": 17,
+          "perfect": 20,
+          "mediocre": 0
+        }
+      },
+      "cms_locked": 0,
+      "repetitions": 0,
+      "original_source": 4910
+    },
+    "it-IT": {
+      "good": 2182,
+      "locked": 17,
+      "source": 4910,
+      "perfect": 21,
+      "mediocre": 2690,
+      "breakdown": {
+        "mt": {
+          "good": 2169,
+          "locked": 0,
+          "perfect": 1,
+          "mediocre": 2690
+        },
+        "tm": {
+          "good": 13,
+          "locked": 17,
+          "perfect": 20,
+          "mediocre": 0
+        }
+      },
+      "cms_locked": 0,
+      "original_source": 4910
+    }
+}

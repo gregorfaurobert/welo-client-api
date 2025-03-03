@@ -1,0 +1,45 @@
+[
+    {
+      "bucketType": "newWords",
+      "additiveValues": [
+        "transMemoryMatches.match0.words",
+        "transMemoryMatches.match50.words"
+      ]
+    },
+    {
+      "bucketType": "repetitions",
+      "additiveValues": [
+        "repetitions.words"
+      ]
+    },
+    {
+      "bucketType": "iceMatches",
+      "additiveValues": [
+        "transMemoryMatches.match101.words"
+      ]
+    },
+    {
+      "bucketType": "oneHundred",
+      "additiveValues": [
+        "transMemoryMatches.match100.words"
+      ]
+    },
+    {
+      "bucketType": "ninetyFive",
+      "additiveValues": [
+        "transMemoryMatches.match95.words"
+      ]
+    },
+    {
+      "bucketType": "eightyFive",
+      "additiveValues": [
+        "transMemoryMatches.match85.words"
+      ]
+    },
+    {
+      "bucketType": "seventyFive",
+      "additiveValues": [
+        "transMemoryMatches.match75.words"
+      ]
+    }
+  ]

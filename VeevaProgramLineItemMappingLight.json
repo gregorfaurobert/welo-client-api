@@ -1,0 +1,45 @@
+[
+    {
+      "bucketType": "newWords",
+      "additiveValues": [
+        "breakdown.match0",
+        "breakdown.match50"
+      ]
+    },
+    {
+      "bucketType": "repetitions",
+      "additiveValues": [
+        "breakdown.repetitions"
+      ]
+    },
+    {
+      "bucketType": "iceMatches",
+      "additiveValues": [
+        "breakdown.match101"
+      ]
+    },
+    {
+      "bucketType": "oneHundred",
+      "additiveValues": [
+        "breakdown.match100"
+      ]
+    },
+    {
+      "bucketType": "ninetyFive",
+      "additiveValues": [
+        "breakdown.match95"
+      ]
+    },
+    {
+      "bucketType": "eightyFive",
+      "additiveValues": [
+        "breakdown.match85"
+      ]
+    },
+    {
+      "bucketType": "seventyFive",
+      "additiveValues": [
+        "breakdown.match75"
+      ]
+    }
+  ]

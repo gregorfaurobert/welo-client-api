@@ -1,0 +1,50 @@
+[
+    {
+      "bucketType": "tmPerfect",
+      "additiveValues": [
+        "breakdown.tm.perfect"
+      ]
+    },
+    {
+      "bucketType": "tmMediocre",
+      "additiveValues": [
+        "breakdown.tm.mediocre"
+      ]
+    },
+    {
+      "bucketType": "tmLocked",
+      "additiveValues": [
+        "breakdown.tm.locked"
+      ]
+    },
+    {
+      "bucketType": "tmGood",
+      "additiveValues": [
+        "breakdown.tm.good"
+      ]
+    },
+    {
+      "bucketType": "mtPerfect",
+      "additiveValues": [
+        "breakdown.mt.perfect"
+      ]
+    },
+    {
+      "bucketType": "mtMediocre",
+      "additiveValues": [
+        "breakdown.mt.mediocre"
+      ]
+    },
+    {
+      "bucketType": "mtLocked",
+      "additiveValues": [
+        "breakdown.mt.locked"
+      ]
+    },
+    {
+      "bucketType": "mtGood",
+      "additiveValues": [
+        "breakdown.mt.good"
+      ]
+    }
+  ]
