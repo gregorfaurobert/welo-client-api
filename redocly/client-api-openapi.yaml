@@ -23,6 +23,38 @@ components:
       in: header
       required: true
 paths:
+  /v1/client-api/services:
+    get:
+      operationId: clientApiListServices
+      summary: Get service list
+      description: This endpoint returns the list of available services.
+      parameters:
+        - in: header
+          name: x-pantheon-auth-key
+          schema:
+            type: string
+          required: true
+          description: The auth key to use to authenticate the request
+      responses:
+        "200":
+          description: Returns an array containing the ID and name of each available service.
+          content:
+            application/json:
+              example:
+                {
+                  data: [{ id: 1, serviceName: Standard Translation }, { id: 2, serviceName: In-Context Review}],
+                  meta: { count: 2 },
+                }
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example: { data: Bad Request, meta: {} }
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
   /v1/client-api/project:
     post:
       operationId: clientApiCreateProject
@@ -117,12 +149,14 @@ paths:
           description: You will receive an object with the project ID.
           content:
             application/json:
-              example: { data: { id: number }, meta: {} }
+              example: { data: { id: 1234567 }, meta: {} }
         "400":
           description: Bad Request
           content:
             application/json:
-              example: { messages: Bad Request}
+              example:
+                Bad request: {status: 400, messages: Bad Request}
+                Requested Service is not available: {status: 400, messages: These services ids are not available in our system}
         "401":
           description: Authentication errors, including unauthorized or token expiration.
           content:
@@ -130,18 +164,101 @@ paths:
               example:
                 Unauthorized: {status: 401, message: Unauthorized}
                 Auth Token Expired: {status: 401, message: Auth Token Expired}
+  /v1/client-api/project/{projectId}/file:
+    post:
+      operationId: clientApiUploadFile
+      summary: Upload file
+      description: This endpoint can be used to upload the necessary file (Max 2Gb). To do this, the project must already be created. To upload the files, use the “form-data” format in the body of the request.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - file
+                - asset
+              properties:
+                file:
+                  type: string
+                  description: The file you want to upload in the project.
+                asset:
+                  type: object
+                  description: Information about the file, such as name, type. In the case of type, you have only two options, “work” or “reference”.
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the file.
+                    type:
+                      type: string
+                      description: Either work or reference
+            example:
+              file: file.txt
+              asset:
+                name: "A File Text"
+                type: work
+      parameters:
+        - in: path
+          name: projectId
+          schema:
+            type: number
+          required: true
+          description: Project identifier. Must be unique.
+      responses:
+        "200":
+          description: You will receive an array, where the objects contain file ID and file name.
+          content:
+            application/json:
+              example: { data: [{ id: 12324567, name: "A File Text " }], meta: {} }
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example: { data: Bad Request, meta: {} }
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
+  /v1/client-api/project/{projectId}/file/{fileId}:
+    delete:
+      operationId: clientApiFileDelete
+      summary: Delete file
+      description: This endpoint can be used to delete files.
+      parameters:
+        - in: path
+          name: projectId
+          schema:
+            type: number
+          required: true
+          description: Project identifier. Must be unique.
+        - in: path
+          name: fileId
+          schema:
+            type: number
+          required: true
+          description: File identifier wants to delete.
+      responses:
+        "200":
+          description: You will receive an object with a string that says the file has been deleted successfully.
+          content:
+            application/json:
+              example: { data: Success file deleted, meta: {} }
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example: { message: This file does not exist}
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
   /v1/client-api/project/{projectId}/start:
     put:
       operationId: clientApiStartProject
       summary: Start project
-      description: At this endpoint, you can start the project.
+      description: Initiates the translation process for the specified project.
       parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
         - in: path
           name: projectId
           schema:
@@ -153,11 +270,17 @@ paths:
           description: You will receive an object with a string that says the project has been started successfully.
           content:
             application/json:
-              example: { data: String, meta: Object }
+              example: { data: Project started successfully, meta: {} }
         "400":
           description: Bad Request
+          content:
+            application/json:
+              example: { data: Bad Request, meta: {} }
         "401":
           description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
   /v1/client-api/projects:
     get:
       operationId: clientApiProjectList
@@ -216,106 +339,6 @@ paths:
           content:
             application/json:
               example: { data: { status: String }, meta: Object }
-        "400":
-          description: Bad Request
-        "401":
-          description: Unauthorized
-  /v1/client-api/project/{projectId}/file:
-    post:
-      operationId: clientApiUploadFile
-      summary: Upload file
-      description: This endpoint can be used to upload the necessary file (Max 2Gb). To do this, the project must already be created. To upload the files, use the “form-data” format in the body of the request.
-      parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
-        - in: path
-          name: projectId
-          schema:
-            type: number
-          required: true
-          description: Project identifier. Must be unique.
-        - in: query
-          name: file
-          schema:
-            type: object
-          required: true
-          description: The file you want to use in the project.
-        - in: query
-          name: asset
-          schema:
-            type: object
-          required: true
-          description: Information about the file, such as name, type. In the case of type, you have only two options, “work” or “reference”.
-      responses:
-        "200":
-          description: You will receive an array, where the objects contain file ID and file name.
-          content:
-            application/json:
-              example: { data: [{ id: number, name: string }], meta: {} }
-        "400":
-          description: Bad Request
-        "401":
-          description: Unauthorized
-  /v1/client-api/project/{projectId}/file/{fileId}:
-    delete:
-      operationId: clientApiFileDelete
-      summary: Delete file
-      description: This endpoint can be used to delete files.
-      parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
-        - in: path
-          name: projectId
-          schema:
-            type: number
-          required: true
-          description: Project identifier. Must be unique.
-        - in: path
-          name: fileId
-          schema:
-            type: number
-          required: true
-          description: File identifier wants to delete.
-      responses:
-        "200":
-          description: You will receive an object with a string that says the file has been deleted successfully.
-          content:
-            application/json:
-              example: { data: String, meta: Object }
-        "400":
-          description: Bad Request
-        "401":
-          description: Unauthorized
-  /v1/client-api/services:
-    get:
-      operationId: clientApiListServices
-      summary: Get service list
-      description: This endpoint returns the list of available services.
-      parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
-      responses:
-        "200":
-          description: You will receive an array with identifier and name of each service are available currently.
-          content:
-            application/json:
-              example:
-                {
-                  data: [{ id: number, serviceName: string }],
-                  meta: { count: number },
-                }
         "400":
           description: Bad Request
         "401":
