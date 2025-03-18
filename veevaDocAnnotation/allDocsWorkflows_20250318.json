@@ -1,0 +1,64 @@
+{
+    "responseStatus": "SUCCESS",
+    "data": {
+        "name": "Objectworkflow.mdw_review__c",
+        "controls": [
+            {
+                "instructions": "You are about to start review for the selected document(s). Please complete the following fields to begin this workflow:",
+                "prompts": [],
+                "type": "instructions",
+                "label": "Instructions"
+            },
+            {
+                "prompts": [
+                    {
+                        "label": "Reviewer(s)",
+                        "name": "part_reviewers__c"
+                    },
+                    {
+                        "required": false,
+                        "label": "Task Instructions",
+                        "name": "task_instructions__c"
+                    }
+                ],
+                "required": true,
+                "type": "participant",
+                "label": "Participants"
+            },
+            {
+                "prompts": [
+                    {
+                        "label": "Review Due Date",
+                        "name": "date_review_due_date__c"
+                    }
+                ],
+                "type": "date",
+                "label": "Date"
+            },
+            {
+                "prompts": [
+                    {
+                        "label": "Documents",
+                        "name": "documents__sys"
+                    }
+                ],
+                "type": "documents",
+                "label": "Documents"
+            },
+            {
+                "prompts": [
+                    {
+                        "multi_value": false,
+                        "label": "Description",
+                        "name": "description__sys"
+                    }
+                ],
+                "type": "description",
+                "label": "Description"
+            }
+        ],
+        "label": "Review",
+        "type": "multidocworkflow",
+        "cardinality": "One"
+    }
+}

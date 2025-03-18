@@ -1,13 +1,14 @@
 openapi: "3.0.0"
 #set server once this becomes a "real thing"
 servers:
-  - url: 'https://hypnos-client-api.welocalize.io:5999'
+  - url: 'https://hypnos.welocalize.tools'
 info:
   title: Welocalize Client API Documentation
-  # license:
-  #   name: Apache 2.0
-  #   url: "www.welocalize.com" # Update once this becomes a "real thing"
-  # version: "0.1" # Update once this becomes a "real thing"
+  description: Welcome on the <b>Welocalize Client API</b> documentation site. <br/>Here you will find information on how to create, monitor translation requests to Welocalize and retrieve the localized content. <br/><br/>You can reach out to your Welocalize contact to get your authentication key or use the <a href="https://welocalize.com/contact-us/" target="_blank">contact form</a> to get in touch with us.
+  license:
+    name: Apache 2.0
+    url: "www.welocalize.com" # Update once this becomes a "real thing"
+  version: "0.2" # Update once this becomes a "real thing"
   x-logo:
     url: 'https://www.gala-global.org/sites/default/files/Welocalize_94.jpg'
     altText: welocalize logo
@@ -23,18 +24,48 @@ components:
       in: header
       required: true
 paths:
+  /v1/authentication-token/info:
+    get:
+      operationId: authenticationTokenInfo
+      summary: Get authentication token info.
+      description: This endpoint returns the information about the authentication token such as creation date, expiration date, etc.
+      responses:
+        "200":
+          description: Returns an object with the authentication token information.
+          content:
+            application/json:
+              example: { data: { expirationDate: 2024-01-01T00:00:00.000Z, createdAt: 2024-01-01T00:00:00.000Z, version: 2, scope: {platformInstanceId: 123} }, meta: {} }
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
+  /v1/authentication-token/refresh/:
+    put:
+      operationId: refreshMyAuthenticationToken
+      summary: Refresh my authentication token
+      description: This endpoint can be used to refresh your authentication token.
+      responses:
+        "200":
+          description: Returns an object with the authentication token information.
+          content:
+            application/json:
+              example: { data: { expirationDate: 2024-01-01T00:00:00.000Z, createdAt: 2024-01-01T00:00:00.000Z, version: 2, scope: {platformInstanceId: 123} }, meta: {} }
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example: { message: Unauthorized}
+        "422":
+          description: User authentication token has more than 48 hours left until it expires.
+          content:
+            application/json:
+              example: { message: User authentication token has more than 48 hours left until it expires. }
   /v1/client-api/services:
     get:
       operationId: clientApiListServices
       summary: Get service list
       description: This endpoint returns the list of available services.
-      parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
       responses:
         "200":
           description: Returns an array containing the ID and name of each available service.
@@ -286,13 +317,6 @@ paths:
       operationId: clientApiProjectList
       summary: Get project list
       description: At this endpoint, you can get all the projects with all data.
-      parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
       responses:
         "200":
           description: You will receive an empty object.
@@ -303,30 +327,36 @@ paths:
                   data:
                     [
                       {
-                        id: String,
-                        status: String,
-                        languages: [{ source: String, target: String }],
-                        dueDate: Date,
+                        id: 1234567,
+                        status: comnpleted,
+                        languages: [{ source: en-US, target: fr-FR }],
+                        dueDate: 2024-12-31T00:00:00.000Z
+                      },
+                      {
+                        id: 89012345,
+                        status: in progress,
+                        languages: [{ source: en-US, target: es-ES }],
+                        dueDate: 2025-03-31T00:00:00.000Z
                       },
                     ],
-                  meta: Object,
+                  meta: 2,
                 }
         "400":
           description: Bad Request
+          content:
+            application/json:
+              example: { data: Bad Request, meta: {} }
         "401":
           description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
   /v1/client-api/project/{projectId}/status:
     get:
       operationId: clientApiProjectStatus
       summary: Get project status
-      description: At this endpoint, you can get the project status.
+      description: At this endpoint, you can get the project status. <br/><table><tr><th>Project Status</th><th>Description</th></tr><tr><td>processing</td><td>The project is being processed.</td></tr><tr><td>created</td><td>The project has been successfully created.</td></tr><tr><td>in scoping</td><td>The project is in scoping.</td></tr><tr><td>in progress</td><td>The project is in progress.</td></tr><tr><td>delivery in progress</td><td>The project is in delivery progress.</td></tr><tr><td>completed</td><td>The project has been completed. Deliverables are ready.</td></tr></table><br/><table><tr><th>Exception Status</th><th>Description</th></tr><tr><td>error</td><td>The project has an error.</td></tr><tr><td>cancelled</td><td>Upon bilateral decision the project has been cancelled.</td></tr><tr><td>hold</td><td>The project is on hold. Awaiting further instructions from the client.</td></tr><tr><td>lost</td><td>Upon quote rejection, the project has been lost.</td></tr><tr><td>ignored</td><td>Upon bilateral decision, the project has been ignored.</td></tr></table>
       parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
         - in: path
           name: projectId
           schema:
@@ -338,7 +368,7 @@ paths:
           description: You will receive an object with the status of the project in string value. If you specify a projectId that does not exist, it will return an object with an "undefined" value.
           content:
             application/json:
-              example: { data: { status: String }, meta: Object }
+              example: { data: { status: in scoping }, meta: {} }
         "400":
           description: Bad Request
         "401":
@@ -349,12 +379,6 @@ paths:
       summary: Get deliverable list
       description: This endpoint returns an array with all deliverable assets available for this project. The array contains items with assetId and assetReference (name of the file uploaded).
       parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
         - in: path
           name: projectId
           schema:
@@ -368,25 +392,25 @@ paths:
             application/json:
               example:
                 {
-                  data: [{ id: number, assetReference: string }],
-                  meta: { count: number },
+                  data: [{ id: 0123456789, assetReference: file.txt, sourceLocale: en-US, targetLocale: fr-FR, type: work }],
+                  meta: { count: 1 },
                 }
         "400":
           description: Bad Request
+          content:
+            application/json:
+              example: { data: Bad Request, meta: {} }
         "401":
           description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
   /v1/client-api/project/{projectId}/deliverable/{deliverableId}:
     get:
       operationId: clientApiGetDeliverable
       summary: Get deliverable file
       description: In this endpoint, we can download the data of a deliverable asset of a given project.
       parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
         - in: path
           name: projectId
           schema:
@@ -404,23 +428,23 @@ paths:
           description: If the project deliverable is a hyperlink, it returns "url", "name", "id", otherwise it returns a file stream.
           content:
             application/json:
-              example: { data: object, meta: {} }
+              example: { data: {id: 0123456789, url: https://www.example.com, name: Deliverable File}, meta: {count: 1} }
         "400":
           description: Bad Request
+          content:
+            application/json:
+              example: { data: Bad Request, meta: {} }
         "401":
           description: Unauthorized
+          content:
+            application/json:
+              example: { data: Unauthorized, meta: {} }
   /v1/client-api/project/{projectId}/files:
     get:
       operationId: clientApiGetAssetList
       summary: Get asset list by project
-      description: In this endpoint returns a list of assets associated to a project
+      description: In this endpoint returns a list of assets associated to a project. <br/> <table><tr><th>Assets Types</th></tr><tr><td>Work</td></tr><tr><td>Reference</td></tr><tr><td>Deliverable</td></tr><tr><td>Deliverable Reference</td></tr></table>
       parameters:
-        - in: header
-          name: x-pantheon-auth-key
-          schema:
-            type: string
-          required: true
-          description: The auth key to use to authenticate the request
         - in: path
           name: projectId
           schema:
@@ -437,13 +461,35 @@ paths:
                   data:
                     [
                       {
-                        id: number,
-                        assetReference: string,
-                        source: string,
-                        target: string,
+                        id: 0123456789,
+                        assetReference: file.txt,
+                        source: en-US,
+                        target: fr-FR,
+                        type: work
                       },
+                      {
+                        id: 0123456789,
+                        assetReference: glossary.csv,
+                        source: en-US,
+                        target: fr-FR,
+                        type: reference
+                      },
+                      {
+                        id: 0123456789,
+                        assetReference: deliverable.docx,
+                        source: en-US,
+                        target: fr-FR,
+                        type: deliverable
+                      },
+                      {
+                        id: 0123456789,
+                        assetReference: deliverable_reference.docx,
+                        source: en-US,
+                        target: fr-FR,
+                        type: deliverable reference
+                      }
                     ],
-                  meta: { count: number },
+                  meta: { count: 4 },
                 }
         "400":
           description: Bad Request
