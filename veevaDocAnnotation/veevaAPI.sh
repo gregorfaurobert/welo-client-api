@@ -56,14 +56,5 @@ case $1 in
         curl -L -X GET -H "Authorization: $sessionId" \
         $vault_domain/api/v24.3/services/file_staging/items/content/$file
         ;;
-    test)
-        sessionId=$(curl -X POST $vault_domain/api/$version/auth \
-        -H "Content-Type: application/x-www-form-urlencoded" \
-        -H "Accept: application/json" \
-        -d "username=$username&password=$password" | jq -r '.sessionId')
-        #jobId="452303"
-        curl -X GET -H -H "Authorization: $sessionId" \
-        $vault_domain/api/v24.3/services/jobs/452303
-        ;;
 esac
 
