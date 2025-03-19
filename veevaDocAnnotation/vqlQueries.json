@@ -1,0 +1,13 @@
+{
+  "queries": [
+    {
+      "AllFromActiveWF": "select id, workflow__sys, type__sys, document__sys, document_version__sys, object_name__sys, object_record_id__sys from active_workflow_item__sys"
+    },
+    {
+      "AllFromInactiveWF": "select id, workflow__sys, type__sys, document__sys, document_version__sys, object_name__sys, object_record_id__sys from inactive_workflow_item__sys"
+    },
+    {
+      "documentsFromSMEReview": "SELECT id, workflow__sys, type__sys FROM active_workflow_item__sys WHERE workflow__sys = 1"
+    }
+  ]
+}
