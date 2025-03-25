@@ -1,0 +1,125 @@
+{
+  "responseStatus": "SUCCESS",
+  "data": [
+    {
+      "document_version_id__sys": "5401_0_1",
+      "modified_by_user__sys": "20942916",
+      "references": [],
+      "id__sys": "13",
+      "placemark": {
+        "y_coordinate__sys": 682.736,
+        "coordinates__sys": [
+          344.424,
+          682.736,
+          384.048,
+          682.736,
+          344.424,
+          671.464,
+          384.048,
+          671.464
+        ],
+        "text_start_index__sys": 19,
+        "text_end_index__sys": 19,
+        "type__sys": "text__sys",
+        "height__sys": 11.272,
+        "width__sys": 39.624,
+        "x_coordinate__sys": 344.424,
+        "page_number__sys": 1,
+        "style__sys": "text_highlight__sys"
+      },
+      "created_by_user__sys": "20942916",
+      "comment__sys": "remove that word",
+      "created_date_time__sys": "2025-03-25T13:09:33.000Z",
+      "modified_date_time__sys": "2025-03-25T13:09:33.000Z",
+      "persistent_id__sys": "199111_13",
+      "prevent_bring_forward__sys": false,
+      "title__sys": "amical",
+      "type__sys": "note__sys",
+      "state__sys": "open__sys",
+      "reply_count__sys": 0,
+      "color__sys": "yellow_light__sys"
+    },
+    {
+      "document_version_id__sys": "5401_0_1",
+      "modified_by_user__sys": "20942916",
+      "references": [],
+      "id__sys": "14",
+      "placemark": {
+        "y_coordinate__sys": 645.296,
+        "coordinates__sys": [
+          120.0,
+          645.296,
+          172.824,
+          645.296,
+          120.0,
+          634.024,
+          172.824,
+          634.024
+        ],
+        "text_start_index__sys": 51,
+        "text_end_index__sys": 51,
+        "type__sys": "text__sys",
+        "height__sys": 11.272,
+        "width__sys": 52.824,
+        "x_coordinate__sys": 120.0,
+        "page_number__sys": 1,
+        "style__sys": "text_highlight__sys"
+      },
+      "created_by_user__sys": "20942916",
+      "comment__sys": "replace with changer",
+      "created_date_time__sys": "2025-03-25T13:10:11.000Z",
+      "modified_date_time__sys": "2025-03-25T13:10:11.000Z",
+      "persistent_id__sys": "199111_14",
+      "prevent_bring_forward__sys": false,
+      "title__sys": "reporter",
+      "type__sys": "note__sys",
+      "state__sys": "open__sys",
+      "reply_count__sys": 0,
+      "color__sys": "yellow_light__sys"
+    },
+    {
+      "document_version_id__sys": "5401_0_1",
+      "modified_by_user__sys": "20942916",
+      "references": [],
+      "id__sys": "15",
+      "placemark": {
+        "y_coordinate__sys": 545.546,
+        "coordinates__sys": [
+          252.0,
+          545.546,
+          397.274,
+          545.546,
+          252.0,
+          534.274,
+          397.274,
+          534.274
+        ],
+        "text_start_index__sys": 136,
+        "text_end_index__sys": 138,
+        "type__sys": "text__sys",
+        "height__sys": 11.272,
+        "width__sys": 145.274,
+        "x_coordinate__sys": 252.0,
+        "page_number__sys": 1,
+        "style__sys": "text_highlight__sys"
+      },
+      "created_by_user__sys": "20942916",
+      "comment__sys": "replace with médecin traitant",
+      "created_date_time__sys": "2025-03-25T13:10:48.000Z",
+      "modified_date_time__sys": "2025-03-25T13:10:48.000Z",
+      "persistent_id__sys": "199111_15",
+      "prevent_bring_forward__sys": false,
+      "title__sys": "professionnel de santé",
+      "type__sys": "note__sys",
+      "state__sys": "open__sys",
+      "reply_count__sys": 0,
+      "color__sys": "yellow_light__sys"
+    }
+  ],
+  "responseDetails": {
+    "offset": 0,
+    "limit": 500,
+    "size": 3,
+    "total": 3
+  }
+}

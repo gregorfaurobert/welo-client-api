@@ -1,0 +1,49 @@
+{
+  "responseStatus": "SUCCESS",
+  "data": [
+    {
+      "document_version_id__sys": "4716_0_1",
+      "modified_by_user__sys": "20942916",
+      "references": [],
+      "id__sys": "8",
+      "placemark": {
+        "y_coordinate__sys": 682.736,
+        "coordinates__sys": [
+          54.0,
+          682.736,
+          529.224,
+          682.736,
+          54.0,
+          671.464,
+          529.224,
+          671.464
+        ],
+        "text_start_index__sys": 8,
+        "text_end_index__sys": 23,
+        "type__sys": "text__sys",
+        "height__sys": 11.272,
+        "width__sys": 475.224,
+        "x_coordinate__sys": 54.0,
+        "page_number__sys": 1,
+        "style__sys": "text_highlight__sys"
+      },
+      "created_by_user__sys": "20942916",
+      "comment__sys": "Test Annotations",
+      "created_date_time__sys": "2025-03-19T13:10:45.000Z",
+      "modified_date_time__sys": "2025-03-19T13:10:45.000Z",
+      "persistent_id__sys": "199111_8",
+      "prevent_bring_forward__sys": false,
+      "title__sys": "\"Chèr(e) [Nom du Patient], ceci est un rappel amical pour votre prochain",
+      "type__sys": "note__sys",
+      "state__sys": "open__sys",
+      "reply_count__sys": 0,
+      "color__sys": "yellow_light__sys"
+    }
+  ],
+  "responseDetails": {
+    "offset": 0,
+    "limit": 500,
+    "size": 1,
+    "total": 1
+  }
+}

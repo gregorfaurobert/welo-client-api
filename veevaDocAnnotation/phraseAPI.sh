@@ -4,8 +4,8 @@ baseURL=https://cloud.memsource.com/web
 #password=wlP@ntheon08!
 userName=uat.humberto.acea
 password='bu8aDBHEV$BmhFD'
-token=$(cat phraseToken)
-jobId="H641RhV33Zn46a1thvskP1"
+projectId="H641RhV33Zn46a1thvskP1"
+jobId="YwOT1IwaKnj3rWLwpmjwb7"
 
 case $1 in
     "login")
@@ -13,7 +13,14 @@ case $1 in
         curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
         "userName": "'$userName'",
         "password": "'$password'"
-        }' | jq -r '.token' > phraseToken
+        }' | jq -r '.token'
+    ;;
+    "wai")
+        token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
+        "userName": "'$userName'",
+        "password": "'$password'"
+        }' | jq -r '.token')
+        curl -X GET -H "Authorization: $token" https://cloud.memsource.com/web/api2/v1/auth/whoAmI
     ;;
     "addComment")
         curl -X POST $baseURL/api2/v3/jobs/$jobId/conversations/plains \
@@ -29,5 +36,18 @@ case $1 in
                 "commentedText": "iaculis dolor"
             }
         }'
+    ;;
+    "getJobSegments")
+        beginIndex=0
+        endIndex=100
+        # Get and store the token first
+        token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
+        "userName": "'$userName'",
+        "password": "'$password'"
+        }' | jq -r '.token')
+        
+        # Make the API call with the token
+        curl -X GET -H "Authorization: $token" \
+        $baseURL/api2/v1/projects/$projectId/jobs/$jobId/segments?beginIndex=0&endIndex=100
     ;;
 esac
