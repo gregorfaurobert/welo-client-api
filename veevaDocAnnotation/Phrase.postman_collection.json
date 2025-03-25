@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "200339e0-aefa-4683-ac60-ffb3978b0074",
+		"name": "Phrase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33930945"
+	},
+	"item": [
+		{
+			"name": "GetAuth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"{{userName}}\",\n    \"password\": \"{{password}}\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api2/v3/auth/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v3",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJob",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api2/v1/projects/{{project}}/jobs/{{job}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v1",
+						"projects",
+						"{{project}}",
+						"jobs",
+						"{{job}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchForSegmentOnProject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"segment\": \"Lorem ipsum dolor sit amet\",\n    \"targetLangs\": [\n        \"fr-fr\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api2/v1/projects/{{project}}/transMemories/searchSegmentInProject",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v1",
+						"projects",
+						"{{project}}",
+						"transMemories",
+						"searchSegmentInProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchForSegmentOnJobs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api2/v1/projects/{{project}}/jobs/{{job}}/segments?beginIndex=0&endIndex=100",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v1",
+						"projects",
+						"{{project}}",
+						"jobs",
+						"{{job}}",
+						"segments"
+					],
+					"query": [
+						{
+							"key": "beginIndex",
+							"value": "0"
+						},
+						{
+							"key": "endIndex",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SegmentCount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jobs\": [\n         {\"uid\": {{job}}}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api2/v1/projects/{{project}}/jobs/segmentsCount",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v1",
+						"projects",
+						"{{project}}",
+						"jobs",
+						"segmentsCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": {\n        \"text\": \"Testing From Api call\"\n    },\n    \"references\": {\n        \"transGroupId\": 0,\n        \"segmentId\": \"Vom0CA8kW7SG1qSD1_dc7:1\",\n        \"commentedText\": \"iaculis dolor\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api2/v3/jobs/{{job}}/conversations/plains",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v3",
+						"jobs",
+						"{{job}}",
+						"conversations",
+						"plains"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListConversations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api2/v1/jobs/{{job}}/conversations/plains",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api2",
+						"v1",
+						"jobs",
+						"{{job}}",
+						"conversations",
+						"plains"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "ApiToken {{token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://cloud.memsource.com/web",
+			"type": "string"
+		},
+		{
+			"key": "project",
+			"value": "a5FzB0Ev4Tg0EAZJsPWcX0",
+			"type": "string"
+		},
+		{
+			"key": "job",
+			"value": "0WvsLxFkVEg2vqkYAd9kP4",
+			"type": "string"
+		},
+		{
+			"key": "segment",
+			"value": "Vom0CA8kW7SG1qSD1_dc7:0",
+			"type": "string"
+		}
+	]
+}

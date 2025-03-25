@@ -8,6 +8,9 @@
     },
     {
       "documentsFromSMEReview": "SELECT id, workflow__sys, type__sys FROM active_workflow_item__sys WHERE workflow__sys = 1"
+    },
+    {
+      "allDocsId": "SELECT id, minor_version_number__v, major_version_number__v, name__v FROM documents"
     }
   ]
 }
