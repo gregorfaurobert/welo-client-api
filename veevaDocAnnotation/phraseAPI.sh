@@ -20,7 +20,7 @@ case $1 in
         "userName": "'$userName'",
         "password": "'$password'"
         }' | jq -r '.token')
-        curl -X GET -H "Authorization: $token" https://cloud.memsource.com/web/api2/v1/auth/whoAmI
+        curl -X GET -H "Authorization: ApiToken $token" https://cloud.memsource.com/web/api2/v1/auth/whoAmI
     ;;
     "addComment")
         curl -X POST $baseURL/api2/v3/jobs/$jobId/conversations/plains \
@@ -37,17 +37,46 @@ case $1 in
             }
         }'
     ;;
+    "getSegmentCount")
+        token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
+        "userName": "'$userName'",
+        "password": "'$password'"
+        }' | jq -r '.token')
+        curl -X POST -H "Authorization: ApiToken $token" \
+        $baseURL/api2/v1/projects/$projectId/jobs/segmentsCount \
+        -H "Content-Type: application/json" \
+        -d '{
+            "jobs": [
+                {
+                    "uid": "'$jobId'"
+                }
+            ]
+        }' | jq '.segmentsCountsResults[0].counts.segmentsCount'
+    ;;
     "getJobSegments")
         beginIndex=0
-        endIndex=100
+        endIndex=$(token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
+        "userName": "'$userName'",
+        "password": "'$password'"
+        }' | jq -r '.token')
+        curl -X POST -H "Authorization: ApiToken $token" \
+        $baseURL/api2/v1/projects/$projectId/jobs/segmentsCount \
+        -H "Content-Type: application/json" \
+        -d '{
+            "jobs": [
+                {
+                    "uid": "'$jobId'"
+                }
+            ]
+        }' | jq '.segmentsCountsResults[0].counts.segmentsCount')
         # Get and store the token first
         token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
         "userName": "'$userName'",
         "password": "'$password'"
         }' | jq -r '.token')
         
-        # Make the API call with the token
-        curl -X GET -H "Authorization: $token" \
-        $baseURL/api2/v1/projects/$projectId/jobs/$jobId/segments?beginIndex=0&endIndex=100
+        # Make the API call with the token and format with jq
+        curl -X GET -H "Authorization: ApiToken $token" \
+        "$baseURL/api2/v1/projects/$projectId/jobs/$jobId/segments?beginIndex=$beginIndex&endIndex=$endIndex" | jq '.'
     ;;
 esac
