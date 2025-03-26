@@ -1,0 +1,34 @@
+{
+    "comments": [
+        {
+            "comment": {
+                "text": "remove that word"
+            },
+            "references": {
+                "transGroupId": 0,
+                "segmentId": "6OspgCiB5XUzzMZp_dc8:2",
+                "commentedText": "amical"
+            }
+        },
+        {
+            "comment": {
+                "text": "replace with changer"
+            },
+            "references": {
+                "transGroupId": 0,
+                "segmentId": "6OspgCiB5XUzzMZp_dc8:4",
+                "commentedText": "reporter"
+            }
+        },
+        {
+            "comment": {
+                "text": "replace with médecin traitant"
+            },
+            "references": {
+                "transGroupId": 0,
+                "segmentId": "6OspgCiB5XUzzMZp_dc8:9",
+                "commentedText": "professionnel de santé"
+            }
+        }
+    ]
+}

@@ -1,0 +1,274 @@
+{
+  "segments": [
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Textes destinés aux patients",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742480483361,
+      "id": "6OspgCiB5XUzzMZp_dc8:0",
+      "source": "Patient-Facing Texts",
+      "modifiedAt": 1742905906489
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Rappel de rendez-vous :",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905663541,
+      "id": "6OspgCiB5XUzzMZp_dc8:1",
+      "source": "Appointment Reminder:",
+      "modifiedAt": 1742905906051
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "« Cher [Nom du patient], ceci est un rappel amical concernant votre prochain rendez-vous avec le Dr Smith le 14 septembre à 10 h 30.",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905677357,
+      "id": "6OspgCiB5XUzzMZp_dc8:2",
+      "source": "\"Dear [Patient Name], this is a friendly reminder for your upcoming appointment with Dr. Smith on September 14th at 10:30 AM.",
+      "modifiedAt": 1742905905501
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Veuillez arriver 10 minutes à l’avance pour remplir les documents nécessaires.",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905688609,
+      "id": "6OspgCiB5XUzzMZp_dc8:3",
+      "source": "Please arrive 10 minutes early to complete any necessary paperwork.",
+      "modifiedAt": 1742905904978
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Si vous souhaitez reporter votre rendez-vous, veuillez contacter notre cabinet au (123) 456-7890.",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905696582,
+      "id": "6OspgCiB5XUzzMZp_dc8:4",
+      "source": "If you need to reschedule, contact our office at (123) 456-7890.",
+      "modifiedAt": 1742905904488
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Au plaisir de vous recevoir !»",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905698632,
+      "id": "6OspgCiB5XUzzMZp_dc8:5",
+      "source": "We look forward to seeing you!\"",
+      "modifiedAt": 1742905698632
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Conseils concernant les médicaments :",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905707478,
+      "id": "6OspgCiB5XUzzMZp_dc8:6",
+      "source": "Medication Instructions:",
+      "modifiedAt": 1742905707478
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "« Bonjour [Nom du patient], n’oubliez pas de prendre vos médicaments deux fois par jour, une fois le matin et une fois le soir, avec un verre d’eau.",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905727718,
+      "id": "6OspgCiB5XUzzMZp_dc8:7",
+      "source": "\"Hello [Patient Name], please remember to take your medication twice daily, once in the morning and once in the evening, with a glass of water.",
+      "modifiedAt": 1742905727718
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Il est important de prendre vos médicaments à la même heure chaque jour pour garantir leur efficacité.",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905734132,
+      "id": "6OspgCiB5XUzzMZp_dc8:8",
+      "source": "It is important to take the medication at the same time each day to ensure its effectiveness.",
+      "modifiedAt": 1742905734132
+    },
+    {
+      "workflowLevel": null,
+      "modifiedBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "translation": "Si vous ressentez des effets secondaires, contactez immédiatement votre professionnel de santé. »",
+      "workflowStep": null,
+      "createdBy": {
+        "userName": "pantheon_uat",
+        "uid": "d1N415F8SAJVsQjt0dTPlj",
+        "id": "778111",
+        "firstName": "Pantheon",
+        "lastName": "UAT",
+        "role": "PROJECT_MANAGER",
+        "email": "jan.grodecki@welocalize.com"
+      },
+      "createdAt": 1742905898784,
+      "id": "6OspgCiB5XUzzMZp_dc8:9",
+      "source": "If you experience any side effects, contact your healthcare provider immediately.\"",
+      "modifiedAt": 1742905898784
+    }
+  ]
+}
