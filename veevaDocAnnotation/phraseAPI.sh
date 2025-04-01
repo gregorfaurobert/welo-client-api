@@ -39,6 +39,17 @@ case $1 in
             -d "$comment"
         done < <(jq -c '.comments[]' "$SCRIPT_DIR/comments.json")
     ;;
+    "addAnnotatedPDF")
+        token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
+        "userName": "'$userName'",
+        "password": "'$password'"
+        }' | jq -r '.token')
+        curl -X POST "$baseURL/api2/v2/projects/$projectId/references" \
+        -H "Authorization: ApiToken $token" \
+        -H "Content-Type: multipart/form-data" \
+        -F "file=@documentId_5401_annotated_20250331.pdf" \
+        -F "name=documentId_5401_annotated_20250331.pdf"
+    ;;
     "getSegmentCount")
         token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
         "userName": "'$userName'",
