@@ -92,4 +92,10 @@ case $1 in
         curl -X GET -H "Authorization: ApiToken $token" \
         "$baseURL/api2/v1/projects/$projectId/jobs/$jobId/segments?beginIndex=$beginIndex&endIndex=$endIndex" | jq '.' > $projectId"_"$jobId"_segments_"$(date +%Y%m%d_%H%M%S).json
     ;;
+    "addRefFiles")
+        token=$(curl -X POST $baseURL/api2/v3/auth/login -H "Content-Type: application/json" -d '{
+        "userName": "'$userName'",
+        "password": "'$password'"
+        }' | jq -r '.token')
+    ;;
 esac
