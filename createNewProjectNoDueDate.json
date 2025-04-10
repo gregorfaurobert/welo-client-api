@@ -1,18 +1,10 @@
 {
-  "projectReferenceId": "Gregor Veeva Test 014",
-  "name": "Gregor Veeva Test 014",
+  "projectReferenceId": "Gregor Amgen Test 001",
+  "name": "Gregor Amgen Test 001",
   "languages": [
     {
       "source": "english__c",
       "target": "spanish__c"
-    },
-    {
-      "source": "english__c",
-      "target": "italian__c"
-    },
-    {
-      "source": "english__c",
-      "target": "french__c"
     }
   ],
   "services": [
