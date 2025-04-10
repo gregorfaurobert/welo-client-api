@@ -1,0 +1,4089 @@
+{
+  "document": "sample.pdf",
+  "segmentation_mode": "predefined",
+  "total_segments": 204,
+  "segments_searched": 0,
+  "segments_found": 204,
+  "segments": [
+    {
+      "text": "Integration of Veeva Vault Annotations with",
+      "page": 1,
+      "position": {
+        "x": 51.75,
+        "y": 64.42572784423828,
+        "width": 430.05352783203125,
+        "height": 24.156387329101562
+      },
+      "coordinates": [
+        51.75,
+        64.42572784423828,
+        481.80352783203125,
+        64.42572784423828,
+        51.75,
+        88.58211517333984,
+        481.80352783203125,
+        88.58211517333984
+      ]
+    },
+    {
+      "text": "Phrase",
+      "page": 1,
+      "position": {
+        "x": 51.75,
+        "y": 90.67572784423828,
+        "width": 70.49507141113281,
+        "height": 24.156387329101562
+      },
+      "coordinates": [
+        51.75,
+        90.67572784423828,
+        122.24507141113281,
+        90.67572784423828,
+        51.75,
+        114.83211517333984,
+        122.24507141113281,
+        114.83211517333984
+      ]
+    },
+    {
+      "text": "Feasibility Assessment",
+      "page": 1,
+      "position": {
+        "x": 51.75,
+        "y": 128.098388671875,
+        "width": 205.80230712890625,
+        "height": 21.475128173828125
+      },
+      "coordinates": [
+        51.75,
+        128.098388671875,
+        257.55230712890625,
+        128.098388671875,
+        51.75,
+        149.57351684570312,
+        257.55230712890625,
+        149.57351684570312
+      ]
+    },
+    {
+      "text": "Integrating Veeva Vault document annotations with Phrase via a JavaScript-based middleware is feasible given both systems\u2019 API capabilities:",
+      "page": 1,
+      "position": {
+        "x": 51.75,
+        "y": 164.63671875,
+        "width": 435.34130859375,
+        "height": 31.40625
+      },
+      "coordinates": [
+        51.75,
+        164.63671875,
+        487.09130859375,
+        164.63671875,
+        51.75,
+        196.04296875,
+        487.09130859375,
+        196.04296875
+      ]
+    },
+    {
+      "text": "Veeva Vault API Capabilities :",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "Vault provides REST API endpoints to authenticate and retrieve document annotations.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "An admin can obtain a session token by logging in via the API (Vault returns a sessionId on successful auth) ( API Reference ).",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "Using this token, the middleware can call Vault\u2019s annotation export endpoint to fetch annotations for PDF, DOCX, or XLSX documents.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "Vault supports exporting annotations in a structured format (e.g.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "as a CSV file of \u201cnotes\u201d) for a given document version ( DocumentAnnotationRequest (Vault-API-Library 21.1.2 API) ).",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "This means the middleware can programmatically pull all comments/notes annotated on a document.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 213.38671875,
+        "width": 470.5040283203125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        213.38671875,
+        542.2696533203125,
+        213.38671875,
+        71.765625,
+        352.79296875,
+        542.2696533203125,
+        352.79296875
+      ]
+    },
+    {
+      "text": "(Vault requires that the user account used has proper rights \u2013 for example, only Full User license types can export annotations ( DocumentAnnotationRequest (Vault-API-Library 21.1.2 API) ).)",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 357.38671875,
+        "width": 471.3399658203125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        357.38671875,
+        543.1055908203125,
+        357.38671875,
+        71.765625,
+        406.79296875,
+        543.1055908203125,
+        406.79296875
+      ]
+    },
+    {
+      "text": "Phrase API Capabilities :",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "Phrase (localization platform) offers a robust REST API for importing data.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "Authentication is done via an API access token included in request headers (e.g.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "an HTTP header Authorization:",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "token <YOUR_PHRASE_TOKEN> ( Phrase API Integrations - Pipedream )).",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "The API supports creating new translation keys/entries or uploading files, allowing the middleware to push annotation content into Phrase.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "For instance, the middleware can create a new Phrase \u201ckey\u201d for each Vault annotation (or upload a batch file in JSON/CSV format) representing the annotation text.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "Phrase\u2019s API is well-documented and can accept JSON payloads, which aligns with the idea of transforming Vault\u2019s output into JSON before sending.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "In summary, Phrase\u2019s API provides the necessary endpoints to programmatically insert annotation data into the platform (whether as translatable strings, comments, or other custom data as needed).",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 413.63671875,
+        "width": 471.98712158203125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        413.63671875,
+        543.7527465820312,
+        413.63671875,
+        71.765625,
+        607.04296875,
+        543.7527465820312,
+        607.04296875
+      ]
+    },
+    {
+      "text": "Integration Workflow :",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 613.13671875,
+        "width": 465.14453125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        613.13671875,
+        536.91015625,
+        613.13671875,
+        71.765625,
+        752.54296875,
+        536.91015625,
+        752.54296875
+      ]
+    },
+    {
+      "text": "The architecture can be a two-step or two-agent pipeline \u2013 one part of the middleware pulls data from Vault, and another pushes data to Phrase.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 613.13671875,
+        "width": 465.14453125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        613.13671875,
+        536.91015625,
+        613.13671875,
+        71.765625,
+        752.54296875,
+        536.91015625,
+        752.54296875
+      ]
+    },
+    {
+      "text": "This separation is feasible:",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 613.13671875,
+        "width": 465.14453125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        613.13671875,
+        536.91015625,
+        613.13671875,
+        71.765625,
+        752.54296875,
+        536.91015625,
+        752.54296875
+      ]
+    },
+    {
+      "text": "the \u201cretriever\u201d component uses Vault\u2019s APIs to gather annotations (with the admin token), then passes the results (as JSON or CSV) to the \u201cuploader\u201d component.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 613.13671875,
+        "width": 465.14453125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        613.13671875,
+        536.91015625,
+        613.13671875,
+        71.765625,
+        752.54296875,
+        536.91015625,
+        752.54296875
+      ]
+    },
+    {
+      "text": "This design keeps Vault and Phrase interactions decoupled, and you can implement it in Node.js using libraries like Axios or Fetch for API calls.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 613.13671875,
+        "width": 465.14453125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        613.13671875,
+        536.91015625,
+        613.13671875,
+        71.765625,
+        752.54296875,
+        536.91015625,
+        752.54296875
+      ]
+    },
+    {
+      "text": "The data transformation (Vault format to Phrase format) is straightforward (CSV parsing, JSON formatting), making real-time or periodic sync possible.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 613.13671875,
+        "width": 465.14453125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        71.765625,
+        613.13671875,
+        536.91015625,
+        613.13671875,
+        71.765625,
+        752.54296875,
+        536.91015625,
+        752.54296875
+      ]
+    },
+    {
+      "text": "Potential Challenges :",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 758.63671875,
+        "width": 466.4349365234375,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        758.63671875,
+        538.2005615234375,
+        758.63671875,
+        71.765625,
+        808.04296875,
+        538.2005615234375,
+        808.04296875
+      ]
+    },
+    {
+      "text": "One challenge is format conversion \u2013 Vault\u2019s annotation export might be CSV, whereas Phrase\u2019s API expects JSON payloads.",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 758.63671875,
+        "width": 466.4349365234375,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        758.63671875,
+        538.2005615234375,
+        758.63671875,
+        71.765625,
+        808.04296875,
+        538.2005615234375,
+        808.04296875
+      ]
+    },
+    {
+      "text": "The middleware must convert the CSV data (rows of annotation info) into JSON objects or another format that",
+      "page": 1,
+      "position": {
+        "x": 71.765625,
+        "y": 758.63671875,
+        "width": 466.4349365234375,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        758.63671875,
+        538.2005615234375,
+        758.63671875,
+        71.765625,
+        808.04296875,
+        538.2005615234375,
+        808.04296875
+      ]
+    },
+    {
+      "text": "High-Level Implementation Steps",
+      "page": 2,
+      "position": {
+        "x": 51.75,
+        "y": 367.348388671875,
+        "width": 294.6285095214844,
+        "height": 21.475128173828125
+      },
+      "coordinates": [
+        51.75,
+        367.348388671875,
+        346.3785095214844,
+        367.348388671875,
+        51.75,
+        388.8235168457031,
+        346.3785095214844,
+        388.8235168457031
+      ]
+    },
+    {
+      "text": "Phrase accepts.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 29.63671875,
+        "width": 469.57373046875,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        29.63671875,
+        541.33935546875,
+        29.63671875,
+        71.765625,
+        151.04296875,
+        541.33935546875,
+        151.04296875
+      ]
+    },
+    {
+      "text": "Another challenge is ensuring that each annotation is mapped correctly (e.g., include context like document ID or page number in the data sent to Phrase, possibly as part of the key name or as a comment metadata, so the annotations remain identifiable).",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 29.63671875,
+        "width": 469.57373046875,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        29.63671875,
+        541.33935546875,
+        29.63671875,
+        71.765625,
+        151.04296875,
+        541.33935546875,
+        151.04296875
+      ]
+    },
+    {
+      "text": "Also, if there are many annotations or documents, the solution needs to handle them in batches to avoid hitting API limits.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 29.63671875,
+        "width": 469.57373046875,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        29.63671875,
+        541.33935546875,
+        29.63671875,
+        71.765625,
+        151.04296875,
+        541.33935546875,
+        151.04296875
+      ]
+    },
+    {
+      "text": "Overall, these challenges are surmountable with careful coding (e.g.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 29.63671875,
+        "width": 469.57373046875,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        29.63671875,
+        541.33935546875,
+        29.63671875,
+        71.765625,
+        151.04296875,
+        541.33935546875,
+        151.04296875
+      ]
+    },
+    {
+      "text": "using streaming or paging if needed, and queuing requests to not flood either API).",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 29.63671875,
+        "width": 469.57373046875,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        29.63671875,
+        541.33935546875,
+        29.63671875,
+        71.765625,
+        151.04296875,
+        541.33935546875,
+        151.04296875
+      ]
+    },
+    {
+      "text": "Security Considerations :",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "Both APIs use token-based auth, so secure token handling in the middleware is critical.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "The Vault session ID (or OAuth token) and the Phrase API token should be stored securely (e.g., in environment variables or a secure vault, not hard-coded) and transmitted only over HTTPS.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "Ensure the admin API user in Vault has least privileges necessary (only rights to read annotations) to reduce risk.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "Likewise, the Phrase token should be scoped to the specific project or data it needs.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "The integration should also enforce TLS/HTTPS for all API calls (Vault and Phrase APIs are HTTPS by default) to protect data in transit.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "Finally, log files should omit sensitive info like tokens or personally identifiable annotation content.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "By using the Vault session ID for a limited time and refreshing it as needed (session IDs can expire due to inactivity ( API Reference )), the middleware can maintain security while performing the integration.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 157.13671875,
+        "width": 470.6983642578125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        157.13671875,
+        542.4639892578125,
+        157.13671875,
+        71.765625,
+        350.54296875,
+        542.4639892578125,
+        350.54296875
+      ]
+    },
+    {
+      "text": "1.",
+      "page": 2,
+      "position": {
+        "x": 58.41796875,
+        "y": 404.63671875,
+        "width": 485.0849609375,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        404.63671875,
+        543.5029296875,
+        404.63671875,
+        58.41796875,
+        418.04296875,
+        543.5029296875,
+        418.04296875
+      ]
+    },
+    {
+      "text": "Authenticate with Veeva Vault API :",
+      "page": 2,
+      "position": {
+        "x": 58.41796875,
+        "y": 404.63671875,
+        "width": 485.0849609375,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        404.63671875,
+        543.5029296875,
+        404.63671875,
+        58.41796875,
+        418.04296875,
+        543.5029296875,
+        418.04296875
+      ]
+    },
+    {
+      "text": "Use admin credentials (or an OAuth token if set up)",
+      "page": 2,
+      "position": {
+        "x": 58.41796875,
+        "y": 404.63671875,
+        "width": 485.0849609375,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        404.63671875,
+        543.5029296875,
+        404.63671875,
+        58.41796875,
+        418.04296875,
+        543.5029296875,
+        418.04296875
+      ]
+    },
+    {
+      "text": "to obtain a session token for Vault.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 422.63671875,
+        "width": 458.47869873046875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        71.765625,
+        422.63671875,
+        530.2443237304688,
+        422.63671875,
+        71.765625,
+        436.04296875,
+        530.2443237304688,
+        436.04296875
+      ]
+    },
+    {
+      "text": "For example, call the Vault authentication endpoint:",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 422.63671875,
+        "width": 458.47869873046875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        71.765625,
+        422.63671875,
+        530.2443237304688,
+        422.63671875,
+        71.765625,
+        436.04296875,
+        530.2443237304688,
+        436.04296875
+      ]
+    },
+    {
+      "text": "POST https://{vault_domain}/api/{version}/auth with the admin\u2019s username/password in the request body.",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 439.95703125,
+        "width": 465.978271484375,
+        "height": 32.0859375
+      },
+      "coordinates": [
+        74.90625,
+        439.95703125,
+        540.884521484375,
+        439.95703125,
+        74.90625,
+        472.04296875,
+        540.884521484375,
+        472.04296875
+      ]
+    },
+    {
+      "text": "On success, Vault returns a JSON containing a",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 439.95703125,
+        "width": 465.978271484375,
+        "height": 32.0859375
+      },
+      "coordinates": [
+        74.90625,
+        439.95703125,
+        540.884521484375,
+        439.95703125,
+        74.90625,
+        472.04296875,
+        540.884521484375,
+        472.04296875
+      ]
+    },
+    {
+      "text": "sessionId value ( API Reference ).",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 475.95703125,
+        "width": 455.06158447265625,
+        "height": 68.0859375
+      },
+      "coordinates": [
+        74.90625,
+        475.95703125,
+        529.9678344726562,
+        475.95703125,
+        74.90625,
+        544.04296875,
+        529.9678344726562,
+        544.04296875
+      ]
+    },
+    {
+      "text": "This sessionId is used as the auth token for subsequent calls (e.g.",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 475.95703125,
+        "width": 455.06158447265625,
+        "height": 68.0859375
+      },
+      "coordinates": [
+        74.90625,
+        475.95703125,
+        529.9678344726562,
+        475.95703125,
+        74.90625,
+        544.04296875,
+        529.9678344726562,
+        544.04296875
+      ]
+    },
+    {
+      "text": "include it as Authorization:",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 475.95703125,
+        "width": 455.06158447265625,
+        "height": 68.0859375
+      },
+      "coordinates": [
+        74.90625,
+        475.95703125,
+        529.9678344726562,
+        475.95703125,
+        74.90625,
+        544.04296875,
+        529.9678344726562,
+        544.04296875
+      ]
+    },
+    {
+      "text": "Bearer <sessionId> in request headers ( API Reference )).",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 475.95703125,
+        "width": 455.06158447265625,
+        "height": 68.0859375
+      },
+      "coordinates": [
+        74.90625,
+        475.95703125,
+        529.9678344726562,
+        475.95703125,
+        74.90625,
+        544.04296875,
+        529.9678344726562,
+        544.04296875
+      ]
+    },
+    {
+      "text": "Ensure the token is stored in memory or a secure cache for use by the next steps.",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 475.95703125,
+        "width": 455.06158447265625,
+        "height": 68.0859375
+      },
+      "coordinates": [
+        74.90625,
+        475.95703125,
+        529.9678344726562,
+        475.95703125,
+        74.90625,
+        544.04296875,
+        529.9678344726562,
+        544.04296875
+      ]
+    },
+    {
+      "text": "2.",
+      "page": 2,
+      "position": {
+        "x": 58.41796875,
+        "y": 550.13671875,
+        "width": 485.2584228515625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        550.13671875,
+        543.6763916015625,
+        550.13671875,
+        58.41796875,
+        563.54296875,
+        543.6763916015625,
+        563.54296875
+      ]
+    },
+    {
+      "text": "Fetching Annotations from Vault :",
+      "page": 2,
+      "position": {
+        "x": 58.41796875,
+        "y": 550.13671875,
+        "width": 485.2584228515625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        550.13671875,
+        543.6763916015625,
+        550.13671875,
+        58.41796875,
+        563.54296875,
+        543.6763916015625,
+        563.54296875
+      ]
+    },
+    {
+      "text": "With a valid session token, call Vault\u2019s API to retrieve",
+      "page": 2,
+      "position": {
+        "x": 58.41796875,
+        "y": 550.13671875,
+        "width": 485.2584228515625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        550.13671875,
+        543.6763916015625,
+        550.13671875,
+        58.41796875,
+        563.54296875,
+        543.6763916015625,
+        563.54296875
+      ]
+    },
+    {
+      "text": "document annotations.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 568.13671875,
+        "width": 450.045166015625,
+        "height": 31.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        568.13671875,
+        521.810791015625,
+        568.13671875,
+        71.765625,
+        599.546630859375,
+        521.810791015625,
+        599.546630859375
+      ]
+    },
+    {
+      "text": "Vault provides a dedicated endpoint for exporting annotations (notes) of a document version.",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 568.13671875,
+        "width": 450.045166015625,
+        "height": 31.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        568.13671875,
+        521.810791015625,
+        568.13671875,
+        71.765625,
+        599.546630859375,
+        521.810791015625,
+        599.546630859375
+      ]
+    },
+    {
+      "text": "For example:",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 568.13671875,
+        "width": 450.045166015625,
+        "height": 31.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        568.13671875,
+        521.810791015625,
+        568.13671875,
+        71.765625,
+        599.546630859375,
+        521.810791015625,
+        599.546630859375
+      ]
+    },
+    {
+      "text": "GET",
+      "page": 2,
+      "position": {
+        "x": 71.765625,
+        "y": 568.13671875,
+        "width": 450.045166015625,
+        "height": 31.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        568.13671875,
+        521.810791015625,
+        568.13671875,
+        71.765625,
+        599.546630859375,
+        521.810791015625,
+        599.546630859375
+      ]
+    },
+    {
+      "text": "https://{vault_domain}/api/{version}/objects/documents/{docId}/versions/{m",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 605.323974609375,
+        "width": 467.75439453125,
+        "height": 12.22265625
+      },
+      "coordinates": [
+        74.90625,
+        605.323974609375,
+        542.66064453125,
+        605.323974609375,
+        74.90625,
+        617.546630859375,
+        542.66064453125,
+        617.546630859375
+      ]
+    },
+    {
+      "text": "ajorVersion}/{minorVersion}/doc-export-annotations-to-csv (including the",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 622.13671875,
+        "width": 438.1705322265625,
+        "height": 13.4765625
+      },
+      "coordinates": [
+        74.90625,
+        622.13671875,
+        513.0767822265625,
+        622.13671875,
+        74.90625,
+        635.61328125,
+        513.0767822265625,
+        635.61328125
+      ]
+    },
+    {
+      "text": "Authorization:",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 640.13671875,
+        "width": 467.069091796875,
+        "height": 139.40625
+      },
+      "coordinates": [
+        74.90625,
+        640.13671875,
+        541.975341796875,
+        640.13671875,
+        74.90625,
+        779.54296875,
+        541.975341796875,
+        779.54296875
+      ]
+    },
+    {
+      "text": "Bearer <sessionId> header) will download the annotations in CSV format ( DocumentAnnotationRequest (Vault-API-Library 21.1.2 API) ).",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 640.13671875,
+        "width": 467.069091796875,
+        "height": 139.40625
+      },
+      "coordinates": [
+        74.90625,
+        640.13671875,
+        541.975341796875,
+        640.13671875,
+        74.90625,
+        779.54296875,
+        541.975341796875,
+        779.54296875
+      ]
+    },
+    {
+      "text": "The response is typically a CSV file where each line represents an annotation (with details like annotation text, author, page number, etc.).",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 640.13671875,
+        "width": 467.069091796875,
+        "height": 139.40625
+      },
+      "coordinates": [
+        74.90625,
+        640.13671875,
+        541.975341796875,
+        640.13671875,
+        74.90625,
+        779.54296875,
+        541.975341796875,
+        779.54296875
+      ]
+    },
+    {
+      "text": "The middleware agent should handle the HTTP response (which may be a file stream or blob) and save or directly process the CSV content.",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 640.13671875,
+        "width": 467.069091796875,
+        "height": 139.40625
+      },
+      "coordinates": [
+        74.90625,
+        640.13671875,
+        541.975341796875,
+        640.13671875,
+        74.90625,
+        779.54296875,
+        541.975341796875,
+        779.54296875
+      ]
+    },
+    {
+      "text": "(If Vault offered JSON output, you could use that, but in most cases CSV is the provided format for annotation export, so the middleware will handle conversion in the next step.)",
+      "page": 2,
+      "position": {
+        "x": 74.90625,
+        "y": 640.13671875,
+        "width": 467.069091796875,
+        "height": 139.40625
+      },
+      "coordinates": [
+        74.90625,
+        640.13671875,
+        541.975341796875,
+        640.13671875,
+        74.90625,
+        779.54296875,
+        541.975341796875,
+        779.54296875
+      ]
+    },
+    {
+      "text": "3.",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 30.38671875,
+        "width": 473.6998291015625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        30.38671875,
+        532.1177978515625,
+        30.38671875,
+        58.41796875,
+        43.79296875,
+        532.1177978515625,
+        43.79296875
+      ]
+    },
+    {
+      "text": "Transforming Annotations to JSON/CSV :",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 30.38671875,
+        "width": 473.6998291015625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        30.38671875,
+        532.1177978515625,
+        30.38671875,
+        58.41796875,
+        43.79296875,
+        532.1177978515625,
+        43.79296875
+      ]
+    },
+    {
+      "text": "Once the CSV data is retrieved, parse and",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 30.38671875,
+        "width": 473.6998291015625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        30.38671875,
+        532.1177978515625,
+        30.38671875,
+        58.41796875,
+        43.79296875,
+        532.1177978515625,
+        43.79296875
+      ]
+    },
+    {
+      "text": "transform it into the format needed for Phrase.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 48.38671875,
+        "width": 463.5496826171875,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        48.38671875,
+        535.3153076171875,
+        48.38671875,
+        71.765625,
+        97.796630859375,
+        535.3153076171875,
+        97.796630859375
+      ]
+    },
+    {
+      "text": "In a Node.js environment, you might use a CSV parsing library (or simple string splitting if format is simple) to convert each annotation line into a JSON object (e.g., { \"document\":",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 48.38671875,
+        "width": 463.5496826171875,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        48.38671875,
+        535.3153076171875,
+        48.38671875,
+        71.765625,
+        97.796630859375,
+        535.3153076171875,
+        97.796630859375
+      ]
+    },
+    {
+      "text": "\"Doc123\", \"page\":",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 48.38671875,
+        "width": 463.5496826171875,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        48.38671875,
+        535.3153076171875,
+        48.38671875,
+        71.765625,
+        97.796630859375,
+        535.3153076171875,
+        97.796630859375
+      ]
+    },
+    {
+      "text": "5,",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 48.38671875,
+        "width": 463.5496826171875,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        71.765625,
+        48.38671875,
+        535.3153076171875,
+        48.38671875,
+        71.765625,
+        97.796630859375,
+        535.3153076171875,
+        97.796630859375
+      ]
+    },
+    {
+      "text": "\"author\":",
+      "page": 3,
+      "position": {
+        "x": 74.90625,
+        "y": 102.38671875,
+        "width": 441.73712158203125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        74.90625,
+        102.38671875,
+        516.6433715820312,
+        102.38671875,
+        74.90625,
+        151.79296875,
+        516.6433715820312,
+        151.79296875
+      ]
+    },
+    {
+      "text": "\"Alice\", \"text\":",
+      "page": 3,
+      "position": {
+        "x": 74.90625,
+        "y": 102.38671875,
+        "width": 441.73712158203125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        74.90625,
+        102.38671875,
+        516.6433715820312,
+        102.38671875,
+        74.90625,
+        151.79296875,
+        516.6433715820312,
+        151.79296875
+      ]
+    },
+    {
+      "text": "\"This paragraph needs update.\" } ).",
+      "page": 3,
+      "position": {
+        "x": 74.90625,
+        "y": 102.38671875,
+        "width": 441.73712158203125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        74.90625,
+        102.38671875,
+        516.6433715820312,
+        102.38671875,
+        74.90625,
+        151.79296875,
+        516.6433715820312,
+        151.79296875
+      ]
+    },
+    {
+      "text": "If the integration prefers CSV all the way through, you might instead prepare a CSV in the structure that Phrase expects \u2013 but more commonly, you\u2019ll send JSON in API calls.",
+      "page": 3,
+      "position": {
+        "x": 74.90625,
+        "y": 102.38671875,
+        "width": 441.73712158203125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        74.90625,
+        102.38671875,
+        516.6433715820312,
+        102.38671875,
+        74.90625,
+        151.79296875,
+        516.6433715820312,
+        151.79296875
+      ]
+    },
+    {
+      "text": "Ensure to clean or format fields as necessary (for instance, if Phrase should only get the annotation text and perhaps an identifier, you might drop other columns).",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 156.38671875,
+        "width": 467.56591796875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        156.38671875,
+        539.33154296875,
+        156.38671875,
+        71.765625,
+        223.79296875,
+        539.33154296875,
+        223.79296875
+      ]
+    },
+    {
+      "text": "This transformation layer is also a place to enrich data:",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 156.38671875,
+        "width": 467.56591796875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        156.38671875,
+        539.33154296875,
+        156.38671875,
+        71.765625,
+        223.79296875,
+        539.33154296875,
+        223.79296875
+      ]
+    },
+    {
+      "text": "for example, add the document ID or name to each annotation entry so that on the Phrase side you know where it came from.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 156.38671875,
+        "width": 467.56591796875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        156.38671875,
+        539.33154296875,
+        156.38671875,
+        71.765625,
+        223.79296875,
+        539.33154296875,
+        223.79296875
+      ]
+    },
+    {
+      "text": "The output of this step is a collection of annotation entries ready to send to Phrase (e.g., an array of JSON objects, or a CSV string if using file upload).",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 228.38671875,
+        "width": 467.58990478515625,
+        "height": 31.40625
+      },
+      "coordinates": [
+        71.765625,
+        228.38671875,
+        539.3555297851562,
+        228.38671875,
+        71.765625,
+        259.79296875,
+        539.3555297851562,
+        259.79296875
+      ]
+    },
+    {
+      "text": "4.",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 266.63671875,
+        "width": 422.17694091796875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        266.63671875,
+        480.59490966796875,
+        266.63671875,
+        58.41796875,
+        280.04296875,
+        480.59490966796875,
+        280.04296875
+      ]
+    },
+    {
+      "text": "Authenticate with Phrase API :",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 266.63671875,
+        "width": 422.17694091796875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        266.63671875,
+        480.59490966796875,
+        266.63671875,
+        58.41796875,
+        280.04296875,
+        480.59490966796875,
+        280.04296875
+      ]
+    },
+    {
+      "text": "Prepare to call Phrase\u2019s API by including the",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 266.63671875,
+        "width": 422.17694091796875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        266.63671875,
+        480.59490966796875,
+        266.63671875,
+        58.41796875,
+        280.04296875,
+        480.59490966796875,
+        280.04296875
+      ]
+    },
+    {
+      "text": "authentication token.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 284.63671875,
+        "width": 469.62872314453125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        284.63671875,
+        541.3943481445312,
+        284.63671875,
+        71.765625,
+        334.04296875,
+        541.3943481445312,
+        334.04296875
+      ]
+    },
+    {
+      "text": "Phrase uses a personal access token for API access.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 284.63671875,
+        "width": 469.62872314453125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        284.63671875,
+        541.3943481445312,
+        284.63671875,
+        71.765625,
+        334.04296875,
+        541.3943481445312,
+        334.04296875
+      ]
+    },
+    {
+      "text": "There is no separate login call needed at runtime;",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 284.63671875,
+        "width": 469.62872314453125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        284.63671875,
+        541.3943481445312,
+        284.63671875,
+        71.765625,
+        334.04296875,
+        541.3943481445312,
+        334.04296875
+      ]
+    },
+    {
+      "text": "instead, you obtain an API token from Phrase\u2019s settings in advance.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 284.63671875,
+        "width": 469.62872314453125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        284.63671875,
+        541.3943481445312,
+        284.63671875,
+        71.765625,
+        334.04296875,
+        541.3943481445312,
+        334.04296875
+      ]
+    },
+    {
+      "text": "Include this token in the header of each API request to Phrase (e.g.,",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 284.63671875,
+        "width": 469.62872314453125,
+        "height": 49.40625
+      },
+      "coordinates": [
+        71.765625,
+        284.63671875,
+        541.3943481445312,
+        284.63671875,
+        71.765625,
+        334.04296875,
+        541.3943481445312,
+        334.04296875
+      ]
+    },
+    {
+      "text": "Authorization:",
+      "page": 3,
+      "position": {
+        "x": 74.90625,
+        "y": 337.95703125,
+        "width": 469.4471435546875,
+        "height": 14.0859375
+      },
+      "coordinates": [
+        74.90625,
+        337.95703125,
+        544.3533935546875,
+        337.95703125,
+        74.90625,
+        352.04296875,
+        544.3533935546875,
+        352.04296875
+      ]
+    },
+    {
+      "text": "token {YOUR_PHRASE_TOKEN} ) ( Phrase API Integrations - Pipedream ).",
+      "page": 3,
+      "position": {
+        "x": 74.90625,
+        "y": 337.95703125,
+        "width": 469.4471435546875,
+        "height": 14.0859375
+      },
+      "coordinates": [
+        74.90625,
+        337.95703125,
+        544.3533935546875,
+        337.95703125,
+        74.90625,
+        352.04296875,
+        544.3533935546875,
+        352.04296875
+      ]
+    },
+    {
+      "text": "Before pushing data, double-check that the Phrase account/project has the proper access:",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 356.63671875,
+        "width": 470.00048828125,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        356.63671875,
+        541.76611328125,
+        356.63671875,
+        71.765625,
+        478.04296875,
+        541.76611328125,
+        478.04296875
+      ]
+    },
+    {
+      "text": "for example, the token should belong to a user who has permission to create keys or upload content in the target Phrase project.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 356.63671875,
+        "width": 470.00048828125,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        356.63671875,
+        541.76611328125,
+        356.63671875,
+        71.765625,
+        478.04296875,
+        541.76611328125,
+        478.04296875
+      ]
+    },
+    {
+      "text": "(If Phrase uses IP whitelisting or requires 2FA, ensure those requirements are handled \u2013 e.g., you might need to supply an OTP header if the token user has two-factor auth enabled, per Phrase API docs.) Essentially, this step is about establishing authorized access to the Phrase project where annotations will be stored.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 356.63671875,
+        "width": 470.00048828125,
+        "height": 121.40625
+      },
+      "coordinates": [
+        71.765625,
+        356.63671875,
+        541.76611328125,
+        356.63671875,
+        71.765625,
+        478.04296875,
+        541.76611328125,
+        478.04296875
+      ]
+    },
+    {
+      "text": "5.",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 484.13671875,
+        "width": 482.3743896484375,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        484.13671875,
+        540.7923583984375,
+        484.13671875,
+        58.41796875,
+        497.54296875,
+        540.7923583984375,
+        497.54296875
+      ]
+    },
+    {
+      "text": "Pushing Annotations into Phrase via API :",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 484.13671875,
+        "width": 482.3743896484375,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        484.13671875,
+        540.7923583984375,
+        484.13671875,
+        58.41796875,
+        497.54296875,
+        540.7923583984375,
+        497.54296875
+      ]
+    },
+    {
+      "text": "Use Phrase\u2019s API to import the transformed",
+      "page": 3,
+      "position": {
+        "x": 58.41796875,
+        "y": 484.13671875,
+        "width": 482.3743896484375,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        484.13671875,
+        540.7923583984375,
+        484.13671875,
+        58.41796875,
+        497.54296875,
+        540.7923583984375,
+        497.54296875
+      ]
+    },
+    {
+      "text": "annotation data.",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 502.13671875,
+        "width": 275.9453430175781,
+        "height": 13.40625
+      },
+      "coordinates": [
+        71.765625,
+        502.13671875,
+        347.7109680175781,
+        502.13671875,
+        71.765625,
+        515.54296875,
+        347.7109680175781,
+        515.54296875
+      ]
+    },
+    {
+      "text": "There are two general approaches:",
+      "page": 3,
+      "position": {
+        "x": 71.765625,
+        "y": 502.13671875,
+        "width": 275.9453430175781,
+        "height": 13.40625
+      },
+      "coordinates": [
+        71.765625,
+        502.13671875,
+        347.7109680175781,
+        502.13671875,
+        71.765625,
+        515.54296875,
+        347.7109680175781,
+        515.54296875
+      ]
+    },
+    {
+      "text": "Direct API Calls :",
+      "page": 3,
+      "position": {
+        "x": 91.78125,
+        "y": 532.88671875,
+        "width": 439.7794189453125,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        532.88671875,
+        531.5606689453125,
+        532.88671875,
+        91.78125,
+        582.296630859375,
+        531.5606689453125,
+        582.296630859375
+      ]
+    },
+    {
+      "text": "Iterate over the annotation entries and create a new entry in Phrase for each.",
+      "page": 3,
+      "position": {
+        "x": 91.78125,
+        "y": 532.88671875,
+        "width": 439.7794189453125,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        532.88671875,
+        531.5606689453125,
+        532.88671875,
+        91.78125,
+        582.296630859375,
+        531.5606689453125,
+        582.296630859375
+      ]
+    },
+    {
+      "text": "For example, use the Keys API to create a new translation key for each annotation.",
+      "page": 3,
+      "position": {
+        "x": 91.78125,
+        "y": 532.88671875,
+        "width": 439.7794189453125,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        532.88671875,
+        531.5606689453125,
+        532.88671875,
+        91.78125,
+        582.296630859375,
+        531.5606689453125,
+        582.296630859375
+      ]
+    },
+    {
+      "text": "An HTTP call might look like:",
+      "page": 3,
+      "position": {
+        "x": 91.78125,
+        "y": 532.88671875,
+        "width": 439.7794189453125,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        532.88671875,
+        531.5606689453125,
+        532.88671875,
+        91.78125,
+        582.296630859375,
+        531.5606689453125,
+        582.296630859375
+      ]
+    },
+    {
+      "text": "POST",
+      "page": 3,
+      "position": {
+        "x": 91.78125,
+        "y": 532.88671875,
+        "width": 439.7794189453125,
+        "height": 49.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        532.88671875,
+        531.5606689453125,
+        532.88671875,
+        91.78125,
+        582.296630859375,
+        531.5606689453125,
+        582.296630859375
+      ]
+    },
+    {
+      "text": "https://api.phrase.com/v2/projects/{project_id}/keys with JSON body",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 586.88671875,
+        "width": 421.227294921875,
+        "height": 13.4765625
+      },
+      "coordinates": [
+        94.921875,
+        586.88671875,
+        516.149169921875,
+        586.88671875,
+        94.921875,
+        600.36328125,
+        516.149169921875,
+        600.36328125
+      ]
+    },
+    {
+      "text": "{\"name\":",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "\"<unique_key_id>\", \"description\":",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "\"<annotation text>\"} (plus the auth header).",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "The \u201cname\u201d could be a generated identifier (e.g., combining document ID and annotation ID) and the annotation text can be put into a field like description or as the base translation for a source locale.",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "If you want the annotation text to be the content to translate, you would also attach it as the source string for a given locale in Phrase.",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "Another option via direct API is to use a Comments or Notes endpoint if Phrase offers it, to attach the annotation text as comments on existing content \u2013 but assuming we want them as translatable strings, creating keys is the way.",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "Each API request should check for success (HTTP 201/200 response) and handle errors (e.g., if a key already exists, you might decide to update it instead of creating a duplicate).",
+      "page": 3,
+      "position": {
+        "x": 94.921875,
+        "y": 604.88671875,
+        "width": 439.765869140625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        94.921875,
+        604.88671875,
+        534.687744140625,
+        604.88671875,
+        94.921875,
+        798.29296875,
+        534.687744140625,
+        798.29296875
+      ]
+    },
+    {
+      "text": "Regardless of approach, the middleware\u2019s \u201cpush\u201d agent should handle the HTTP responses.",
+      "page": 4,
+      "position": {
+        "x": 71.765625,
+        "y": 241.13671875,
+        "width": 468.45721435546875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        71.765625,
+        241.13671875,
+        540.2228393554688,
+        241.13671875,
+        71.765625,
+        326.54296875,
+        540.2228393554688,
+        326.54296875
+      ]
+    },
+    {
+      "text": "On success, the annotations will now exist in Phrase (e.g., as new phrases/strings or comments).",
+      "page": 4,
+      "position": {
+        "x": 71.765625,
+        "y": 241.13671875,
+        "width": 468.45721435546875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        71.765625,
+        241.13671875,
+        540.2228393554688,
+        241.13671875,
+        71.765625,
+        326.54296875,
+        540.2228393554688,
+        326.54296875
+      ]
+    },
+    {
+      "text": "It\u2019s wise to log the IDs or names of created entries from Phrase\u2019s response for traceability.",
+      "page": 4,
+      "position": {
+        "x": 71.765625,
+        "y": 241.13671875,
+        "width": 468.45721435546875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        71.765625,
+        241.13671875,
+        540.2228393554688,
+        241.13671875,
+        71.765625,
+        326.54296875,
+        540.2228393554688,
+        326.54296875
+      ]
+    },
+    {
+      "text": "(Make sure to include the Phrase project ID in the API path and proper auth header as noted in step 4.)",
+      "page": 4,
+      "position": {
+        "x": 71.765625,
+        "y": 241.13671875,
+        "width": 468.45721435546875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        71.765625,
+        241.13671875,
+        540.2228393554688,
+        241.13671875,
+        71.765625,
+        326.54296875,
+        540.2228393554688,
+        326.54296875
+      ]
+    },
+    {
+      "text": "Batch File Upload :",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 30.38671875,
+        "width": 451.774169921875,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        30.38671875,
+        543.555419921875,
+        30.38671875,
+        91.78125,
+        115.796630859375,
+        543.555419921875,
+        115.796630859375
+      ]
+    },
+    {
+      "text": "If there are many annotations, it might be more efficient to batch them.",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 30.38671875,
+        "width": 451.774169921875,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        30.38671875,
+        543.555419921875,
+        30.38671875,
+        91.78125,
+        115.796630859375,
+        543.555419921875,
+        115.796630859375
+      ]
+    },
+    {
+      "text": "The Phrase API allows uploading files (e.g., locale files).",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 30.38671875,
+        "width": 451.774169921875,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        30.38671875,
+        543.555419921875,
+        30.38671875,
+        91.78125,
+        115.796630859375,
+        543.555419921875,
+        115.796630859375
+      ]
+    },
+    {
+      "text": "The middleware could generate a JSON or CSV file in a format Phrase understands (for instance, a simple JSON key-value map or CSV with key and translation columns) containing all annotations, then use the Uploads API (e.g., POST",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 30.38671875,
+        "width": 451.774169921875,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        91.78125,
+        30.38671875,
+        543.555419921875,
+        30.38671875,
+        91.78125,
+        115.796630859375,
+        543.555419921875,
+        115.796630859375
+      ]
+    },
+    {
+      "text": "https://api.phrase.com/v2/projects/{project_id}/uploads ) to import them in one go.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 120.38671875,
+        "width": 447.53375244140625,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        94.921875,
+        120.38671875,
+        542.4556274414062,
+        120.38671875,
+        94.921875,
+        205.796630859375,
+        542.4556274414062,
+        205.796630859375
+      ]
+    },
+    {
+      "text": "Phrase will then process that file and create keys/strings accordingly.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 120.38671875,
+        "width": 447.53375244140625,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        94.921875,
+        120.38671875,
+        542.4556274414062,
+        120.38671875,
+        94.921875,
+        205.796630859375,
+        542.4556274414062,
+        205.796630859375
+      ]
+    },
+    {
+      "text": "This reduces the number of API calls, at the cost of a slightly more complex file prep and waiting for Phrase\u2019s import job to complete.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 120.38671875,
+        "width": 447.53375244140625,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        94.921875,
+        120.38671875,
+        542.4556274414062,
+        120.38671875,
+        94.921875,
+        205.796630859375,
+        542.4556274414062,
+        205.796630859375
+      ]
+    },
+    {
+      "text": "For example, you could create a JSON like {\"Doc123_Ann1\":",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 120.38671875,
+        "width": 447.53375244140625,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        94.921875,
+        120.38671875,
+        542.4556274414062,
+        120.38671875,
+        94.921875,
+        205.796630859375,
+        542.4556274414062,
+        205.796630859375
+      ]
+    },
+    {
+      "text": "\"This paragraph needs update.\", \"Doc123_Ann2\":",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 120.38671875,
+        "width": 447.53375244140625,
+        "height": 85.409912109375
+      },
+      "coordinates": [
+        94.921875,
+        120.38671875,
+        542.4556274414062,
+        120.38671875,
+        94.921875,
+        205.796630859375,
+        542.4556274414062,
+        205.796630859375
+      ]
+    },
+    {
+      "text": "\"Check figure 2.\"} and upload it as a locale file for the source language.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 210.38671875,
+        "width": 401.08758544921875,
+        "height": 13.4765625
+      },
+      "coordinates": [
+        94.921875,
+        210.38671875,
+        496.00946044921875,
+        210.38671875,
+        94.921875,
+        223.86328125,
+        496.00946044921875,
+        223.86328125
+      ]
+    },
+    {
+      "text": "6.",
+      "page": 4,
+      "position": {
+        "x": 58.41796875,
+        "y": 333.38671875,
+        "width": 445.50018310546875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        333.38671875,
+        503.91815185546875,
+        333.38671875,
+        58.41796875,
+        346.79296875,
+        503.91815185546875,
+        346.79296875
+      ]
+    },
+    {
+      "text": "Handling Errors and Logging :",
+      "page": 4,
+      "position": {
+        "x": 58.41796875,
+        "y": 333.38671875,
+        "width": 445.50018310546875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        333.38671875,
+        503.91815185546875,
+        333.38671875,
+        58.41796875,
+        346.79296875,
+        503.91815185546875,
+        346.79296875
+      ]
+    },
+    {
+      "text": "Implement robust error handling around both API",
+      "page": 4,
+      "position": {
+        "x": 58.41796875,
+        "y": 333.38671875,
+        "width": 445.50018310546875,
+        "height": 13.40625
+      },
+      "coordinates": [
+        58.41796875,
+        333.38671875,
+        503.91815185546875,
+        333.38671875,
+        58.41796875,
+        346.79296875,
+        503.91815185546875,
+        346.79296875
+      ]
+    },
+    {
+      "text": "interactions:",
+      "page": 4,
+      "position": {
+        "x": 71.765625,
+        "y": 351.38671875,
+        "width": 64.69000244140625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        71.765625,
+        351.38671875,
+        136.45562744140625,
+        351.38671875,
+        71.765625,
+        364.79296875,
+        136.45562744140625,
+        364.79296875
+      ]
+    },
+    {
+      "text": "For Vault API calls, check the HTTP status and the response body\u2019s",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 370.13671875,
+        "width": 358.8515625,
+        "height": 13.40625
+      },
+      "coordinates": [
+        91.78125,
+        370.13671875,
+        450.6328125,
+        370.13671875,
+        91.78125,
+        383.54296875,
+        450.6328125,
+        383.54296875
+      ]
+    },
+    {
+      "text": "responseStatus field.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 388.13671875,
+        "width": 441.0411376953125,
+        "height": 49.4765625
+      },
+      "coordinates": [
+        94.921875,
+        388.13671875,
+        535.9630126953125,
+        388.13671875,
+        94.921875,
+        437.61328125,
+        535.9630126953125,
+        437.61328125
+      ]
+    },
+    {
+      "text": "Vault\u2019s API will return an error code and message if something goes wrong (for example, if the document ID or version is invalid, or auth failed).",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 388.13671875,
+        "width": 441.0411376953125,
+        "height": 49.4765625
+      },
+      "coordinates": [
+        94.921875,
+        388.13671875,
+        535.9630126953125,
+        388.13671875,
+        94.921875,
+        437.61328125,
+        535.9630126953125,
+        437.61328125
+      ]
+    },
+    {
+      "text": "Vault responses include an errors array with details when",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 388.13671875,
+        "width": 441.0411376953125,
+        "height": 49.4765625
+      },
+      "coordinates": [
+        94.921875,
+        388.13671875,
+        535.9630126953125,
+        388.13671875,
+        94.921875,
+        437.61328125,
+        535.9630126953125,
+        437.61328125
+      ]
+    },
+    {
+      "text": "responseStatus is not \"SUCCESS\" ( Veeva Vault Developer Network | API Reference (v12.0) ).",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 442.13671875,
+        "width": 443.7274169921875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        94.921875,
+        442.13671875,
+        538.6492919921875,
+        442.13671875,
+        94.921875,
+        527.54296875,
+        538.6492919921875,
+        527.54296875
+      ]
+    },
+    {
+      "text": "The middleware should detect this and log a clear error (e.g., \u201cFailed to fetch annotations for Doc123:",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 442.13671875,
+        "width": 443.7274169921875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        94.921875,
+        442.13671875,
+        538.6492919921875,
+        442.13671875,
+        94.921875,
+        527.54296875,
+        538.6492919921875,
+        527.54296875
+      ]
+    },
+    {
+      "text": "Unauthorized\u201d or any message returned).",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 442.13671875,
+        "width": 443.7274169921875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        94.921875,
+        442.13671875,
+        538.6492919921875,
+        442.13671875,
+        94.921875,
+        527.54296875,
+        538.6492919921875,
+        527.54296875
+      ]
+    },
+    {
+      "text": "In case of auth failure, re-authenticate and retry the fetch.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 442.13671875,
+        "width": 443.7274169921875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        94.921875,
+        442.13671875,
+        538.6492919921875,
+        442.13671875,
+        94.921875,
+        527.54296875,
+        538.6492919921875,
+        527.54296875
+      ]
+    },
+    {
+      "text": "In case of rate-limit or server errors, implement retries with backoff.",
+      "page": 4,
+      "position": {
+        "x": 94.921875,
+        "y": 442.13671875,
+        "width": 443.7274169921875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        94.921875,
+        442.13671875,
+        538.6492919921875,
+        442.13671875,
+        94.921875,
+        527.54296875,
+        538.6492919921875,
+        527.54296875
+      ]
+    },
+    {
+      "text": "For Phrase API calls, similarly check HTTP status codes.",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 533.63671875,
+        "width": 450.43194580078125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        91.78125,
+        533.63671875,
+        542.2131958007812,
+        533.63671875,
+        91.78125,
+        673.04296875,
+        542.2131958007812,
+        673.04296875
+      ]
+    },
+    {
+      "text": "A 4xx status means something like invalid input or unauthorized;",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 533.63671875,
+        "width": 450.43194580078125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        91.78125,
+        533.63671875,
+        542.2131958007812,
+        533.63671875,
+        91.78125,
+        673.04296875,
+        542.2131958007812,
+        673.04296875
+      ]
+    },
+    {
+      "text": "log the error response (Phrase typically returns a JSON with an error message).",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 533.63671875,
+        "width": 450.43194580078125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        91.78125,
+        533.63671875,
+        542.2131958007812,
+        533.63671875,
+        91.78125,
+        673.04296875,
+        542.2131958007812,
+        673.04296875
+      ]
+    },
+    {
+      "text": "If it\u2019s a 429 Too Many Requests, that indicates hitting a rate limit \u2013 the code should pause and retry after a delay (Phrase includes headers like X-Rate-Limit-Remaining to indicate remaining calls ( app.phrase.com API Examples | Documentation | Postman API Network )).",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 533.63671875,
+        "width": 450.43194580078125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        91.78125,
+        533.63671875,
+        542.2131958007812,
+        533.63671875,
+        91.78125,
+        673.04296875,
+        542.2131958007812,
+        673.04296875
+      ]
+    },
+    {
+      "text": "For batch upload, Phrase might respond with a status and a report of any issues in the file \u2013 capture that and log it.",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 533.63671875,
+        "width": 450.43194580078125,
+        "height": 139.40625
+      },
+      "coordinates": [
+        91.78125,
+        533.63671875,
+        542.2131958007812,
+        533.63671875,
+        91.78125,
+        673.04296875,
+        542.2131958007812,
+        673.04296875
+      ]
+    },
+    {
+      "text": "Use logging to trace the workflow:",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 679.88671875,
+        "width": 446.8338623046875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        91.78125,
+        679.88671875,
+        538.6151123046875,
+        679.88671875,
+        91.78125,
+        765.29296875,
+        538.6151123046875,
+        765.29296875
+      ]
+    },
+    {
+      "text": "log when starting a retrieval for a document, how many annotations were found, and when pushing to Phrase is done.",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 679.88671875,
+        "width": 446.8338623046875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        91.78125,
+        679.88671875,
+        538.6151123046875,
+        679.88671875,
+        91.78125,
+        765.29296875,
+        538.6151123046875,
+        765.29296875
+      ]
+    },
+    {
+      "text": "Include identifiers (doc IDs, key names, etc.) but avoid logging sensitive data (like the actual annotation text, if confidential, or the auth tokens).",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 679.88671875,
+        "width": 446.8338623046875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        91.78125,
+        679.88671875,
+        538.6151123046875,
+        679.88671875,
+        91.78125,
+        765.29296875,
+        538.6151123046875,
+        765.29296875
+      ]
+    },
+    {
+      "text": "Logging is crucial for troubleshooting integration issues later.",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 679.88671875,
+        "width": 446.8338623046875,
+        "height": 85.40625
+      },
+      "coordinates": [
+        91.78125,
+        679.88671875,
+        538.6151123046875,
+        679.88671875,
+        91.78125,
+        765.29296875,
+        538.6151123046875,
+        765.29296875
+      ]
+    },
+    {
+      "text": "Implement some notifications or alerts for failures \u2013 e.g., if pushing to Phrase fails, the system might queue that annotation for retry or send an alert to administrators.",
+      "page": 4,
+      "position": {
+        "x": 91.78125,
+        "y": 771.38671875,
+        "width": 436.86993408203125,
+        "height": 31.40625
+      },
+      "coordinates": [
+        91.78125,
+        771.38671875,
+        528.6511840820312,
+        771.38671875,
+        91.78125,
+        802.79296875,
+        528.6511840820312,
+        802.79296875
+      ]
+    },
+    {
+      "text": "By handling errors gracefully and logging each step, the middleware can be maintained and monitored in production, ensuring that Vault annotations reliably make their way into Phrase.",
+      "page": 5,
+      "position": {
+        "x": 51.75,
+        "y": 29.63671875,
+        "width": 489.354248046875,
+        "height": 31.40625
+      },
+      "coordinates": [
+        51.75,
+        29.63671875,
+        541.104248046875,
+        29.63671875,
+        51.75,
+        61.04296875,
+        541.104248046875,
+        61.04296875
+      ]
+    },
+    {
+      "text": "Potential Limitations & Considerations",
+      "page": 5,
+      "position": {
+        "x": 51.75,
+        "y": 76.34838104248047,
+        "width": 342.7777404785156,
+        "height": 21.475135803222656
+      },
+      "coordinates": [
+        51.75,
+        76.34838104248047,
+        394.5277404785156,
+        76.34838104248047,
+        51.75,
+        97.82351684570312,
+        394.5277404785156,
+        97.82351684570312
+      ]
+    },
+    {
+      "text": "API Rate Limits :",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "Keep in mind each platform\u2019s call quotas.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "Veeva Vault enforces rate limits on API usage \u2013 by default, around 2,000 API calls per 5 minutes and 100,000 calls per 24 hours ( Veeva Vault Developer Network | API Reference (v12.0) ) (limits can vary by Vault configuration).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "Phrase\u2019s API also has rate limiting (e.g.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "~1000 requests per hour as a typical limit) ( app.phrase.com API Examples | Documentation | Postman API Network ).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "If you need to transfer a large number of annotations, you may need to batch requests or throttle the call rate to avoid hitting these limits.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "Hitting a limit could result in errors (Vault returns API_LIMIT_EXCEEDED if overwhelmed, and Phrase returns HTTP 429 with a retry-after).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "Plan for this by spreading out calls or using the file upload method to reduce call count.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 113.63671875,
+        "width": 470.88177490234375,
+        "height": 175.40625
+      },
+      "coordinates": [
+        71.765625,
+        113.63671875,
+        542.6473999023438,
+        113.63671875,
+        71.765625,
+        289.04296875,
+        542.6473999023438,
+        289.04296875
+      ]
+    },
+    {
+      "text": "Permissions and Access :",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 295.13671875,
+        "width": 470.463134765625,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        295.13671875,
+        542.228759765625,
+        295.13671875,
+        71.765625,
+        452.54296875,
+        542.228759765625,
+        452.54296875
+      ]
+    },
+    {
+      "text": "The Vault user/account used must have permission to read documents and annotations.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 295.13671875,
+        "width": 470.463134765625,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        295.13671875,
+        542.228759765625,
+        295.13671875,
+        71.765625,
+        452.54296875,
+        542.228759765625,
+        452.54296875
+      ]
+    },
+    {
+      "text": "As noted, the annotation export requires a \u201cFull User\u201d license on Vault ( DocumentAnnotationRequest (Vault-API-Library 21.1.2 API) ) \u2013 a limited read-only user might not be allowed to retrieve annotations.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 295.13671875,
+        "width": 470.463134765625,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        295.13671875,
+        542.228759765625,
+        295.13671875,
+        71.765625,
+        452.54296875,
+        542.228759765625,
+        452.54296875
+      ]
+    },
+    {
+      "text": "Ensure the credentials or token you use belong to an admin or power user who can access all needed documents\u2019 annotations.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 295.13671875,
+        "width": 470.463134765625,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        295.13671875,
+        542.228759765625,
+        295.13671875,
+        71.765625,
+        452.54296875,
+        542.228759765625,
+        452.54296875
+      ]
+    },
+    {
+      "text": "On the Phrase side, ensure the API token has write access to the project (and if using a dedicated project for these annotations, that the project is set up and the token\u2019s user is a member of it).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 295.13671875,
+        "width": 470.463134765625,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        295.13671875,
+        542.228759765625,
+        295.13671875,
+        71.765625,
+        452.54296875,
+        542.228759765625,
+        452.54296875
+      ]
+    },
+    {
+      "text": "Also consider that if Vault documents are in different lifecycles or security groups, the integration user must have access across those.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 295.13671875,
+        "width": 470.463134765625,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        295.13671875,
+        542.228759765625,
+        295.13671875,
+        71.765625,
+        452.54296875,
+        542.228759765625,
+        452.54296875
+      ]
+    },
+    {
+      "text": "Data Format & Transformation :",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "Vault\u2019s annotation export format (CSV) might not directly align with how Phrase stores data.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "The integration needs to map fields appropriately.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "For example, Vault\u2019s CSV might include coordinates or page numbers that Phrase doesn\u2019t have a direct place for \u2013 you might omit those or encode them into the key names or comments.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "Conversely, Phrase might require certain fields (like a key name and a string value).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "This mapping should be clearly defined.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "Also note that Vault\u2019s CSV is the snapshot of annotations at the time of export \u2013 if annotations are updated in Vault later, you\u2019d need to decide how to sync updates (e.g., re-run the export and update the entries in Phrase, perhaps by key name).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "There\u2019s no real-time push from Vault, so the integration will likely run on a schedule or be triggered by an event (like when a document review is completed).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 459.38671875,
+        "width": 468.7222900390625,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        459.38671875,
+        540.4879150390625,
+        459.38671875,
+        71.765625,
+        652.79296875,
+        540.4879150390625,
+        652.79296875
+      ]
+    },
+    {
+      "text": "Error Recovery :",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 658.88671875,
+        "width": 470.24188232421875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        658.88671875,
+        542.0075073242188,
+        658.88671875,
+        71.765625,
+        726.29296875,
+        542.0075073242188,
+        726.29296875
+      ]
+    },
+    {
+      "text": "Consider how the middleware recovers from failures.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 658.88671875,
+        "width": 470.24188232421875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        658.88671875,
+        542.0075073242188,
+        658.88671875,
+        71.765625,
+        726.29296875,
+        542.0075073242188,
+        726.29296875
+      ]
+    },
+    {
+      "text": "For example, if the Phrase push fails for one annotation (say due to a network glitch), will you retry immediately, skip it, or log and pick it up in the next run?",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 658.88671875,
+        "width": 470.24188232421875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        658.88671875,
+        542.0075073242188,
+        658.88671875,
+        71.765625,
+        726.29296875,
+        542.0075073242188,
+        726.29296875
+      ]
+    },
+    {
+      "text": "Implement idempotency where possible \u2013 e.g., if you run the sync again, it should not create duplicate entries in Phrase.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 658.88671875,
+        "width": 470.24188232421875,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        658.88671875,
+        542.0075073242188,
+        658.88671875,
+        71.765625,
+        726.29296875,
+        542.0075073242188,
+        726.29296875
+      ]
+    },
+    {
+      "text": "Perhaps use consistent keys/names for annotations so re-running an import just overwrites or skips existing ones.",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 730.88671875,
+        "width": 451.54791259765625,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        730.88671875,
+        523.3135375976562,
+        730.88671875,
+        71.765625,
+        798.29296875,
+        523.3135375976562,
+        798.29296875
+      ]
+    },
+    {
+      "text": "Additionally, if Vault\u2019s API is temporarily down or returns an unexpected format, the middleware should handle that gracefully (perhaps skip that document and continue with others, to avoid one failure blocking all).",
+      "page": 5,
+      "position": {
+        "x": 71.765625,
+        "y": 730.88671875,
+        "width": 451.54791259765625,
+        "height": 67.40625
+      },
+      "coordinates": [
+        71.765625,
+        730.88671875,
+        523.3135375976562,
+        730.88671875,
+        71.765625,
+        798.29296875,
+        523.3135375976562,
+        798.29296875
+      ]
+    },
+    {
+      "text": "In summary, the integration is quite achievable using Vault and Phrase APIs.",
+      "page": 6,
+      "position": {
+        "x": 51.75,
+        "y": 405.38671875,
+        "width": 489.52978515625,
+        "height": 67.40625
+      },
+      "coordinates": [
+        51.75,
+        405.38671875,
+        541.27978515625,
+        405.38671875,
+        51.75,
+        472.79296875,
+        541.27978515625,
+        472.79296875
+      ]
+    },
+    {
+      "text": "By accounting for the above considerations \u2013 respecting API limits, using proper auth and security, converting data formats, and implementing robust error handling \u2013 a middleware service can seamlessly extract annotations from Veeva Vault and inject them into Phrase for further use.",
+      "page": 6,
+      "position": {
+        "x": 51.75,
+        "y": 405.38671875,
+        "width": 489.52978515625,
+        "height": 67.40625
+      },
+      "coordinates": [
+        51.75,
+        405.38671875,
+        541.27978515625,
+        405.38671875,
+        51.75,
+        472.79296875,
+        541.27978515625,
+        472.79296875
+      ]
+    },
+    {
+      "text": "This allows organizations to leverage Vault\u2019s review annotations within Phrase\u2019s environment in an automated, repeatable way, without manual intervention.",
+      "page": 6,
+      "position": {
+        "x": 51.75,
+        "y": 477.38671875,
+        "width": 491.58453369140625,
+        "height": 31.40625
+      },
+      "coordinates": [
+        51.75,
+        477.38671875,
+        543.3345336914062,
+        477.38671875,
+        51.75,
+        508.79296875,
+        543.3345336914062,
+        508.79296875
+      ]
+    },
+    {
+      "text": "Security Concerns :",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "Besides authentication, consider the sensitivity of the annotation content.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "If annotations contain confidential info, ensure the middleware and Phrase are allowed to handle that data (check compliance or regulatory constraints).",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "All communication should be over HTTPS (which both Vault and Phrase APIs require).",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "You might also want to encrypt or secure any intermediate data at rest \u2013 for example, if you store the CSV or JSON on disk temporarily, ensure it\u2019s in a secure location or wipe it after use.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "Audit trails are also useful:",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "keep track of which annotations were transferred and when, in case you need to demonstrate data handling or debug an issue.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "Lastly, token management is important \u2013 the Vault session token should be kept only in memory or a secure store and refreshed regularly (do not reuse a very old session), and the Phrase API token should be rotated periodically according to best practices.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 30.38671875,
+        "width": 467.52178955078125,
+        "height": 193.40625
+      },
+      "coordinates": [
+        71.765625,
+        30.38671875,
+        539.2874145507812,
+        30.38671875,
+        71.765625,
+        223.79296875,
+        539.2874145507812,
+        223.79296875
+      ]
+    },
+    {
+      "text": "Performance :",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "The volume of data will influence design.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "If only a few annotations are transferred at a time, a simple sequential process is fine.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "But if exporting an entire Vault library with thousands of annotations, the middleware must be optimized (perhaps multi- threaded retrieval or using asynchronous calls).",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "However, be cautious:",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "calling too many Vault document exports in parallel could strain the Vault or hit limits.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "It might be better to queue jobs or process one document at a time if performance allows.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "Also, large PDF annotations exports could be sizable CSVs;",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "ensure adequate memory streaming or processing.",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    },
+    {
+      "text": "Monitor the integration\u2019s performance and adjust (e.g., add caching of already-synced annotations, if appropriate, or limit to recently changed documents).",
+      "page": 6,
+      "position": {
+        "x": 71.765625,
+        "y": 230.63671875,
+        "width": 466.8480224609375,
+        "height": 157.40625
+      },
+      "coordinates": [
+        71.765625,
+        230.63671875,
+        538.6136474609375,
+        230.63671875,
+        71.765625,
+        388.04296875,
+        538.6136474609375,
+        388.04296875
+      ]
+    }
+  ]
+}

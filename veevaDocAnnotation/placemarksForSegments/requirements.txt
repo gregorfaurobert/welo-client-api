@@ -1,0 +1,4 @@
+pymupdf==1.23.8
+flask==3.0.2
+python-dotenv==1.0.1
+pytest==8.0.0 

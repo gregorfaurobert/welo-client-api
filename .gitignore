@@ -32,3 +32,9 @@ yarn-error.log*
 # Security files
 *.pem
 *.pem.pub 
+
+# Python
+venv/
+**/venv/
+.pytest_cache/
+**/.pytest_cache/ 
